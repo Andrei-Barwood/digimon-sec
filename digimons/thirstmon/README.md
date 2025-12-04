@@ -33,7 +33,7 @@ pip install thirstmon
 from thirstmon import Uthirstmon
 
 # Crear instancia
-digimon = Uthirstmon()
+digimon = Thirstmon()
 
 # Usar funcionalidad principal
 result = digimon.analyze()

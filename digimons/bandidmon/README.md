@@ -33,7 +33,7 @@ pip install bandidmon
 from bandidmon import Ubandidmon
 
 # Crear instancia
-digimon = Ubandidmon()
+digimon = Bandidmon()
 
 # Usar funcionalidad principal
 result = digimon.analyze()
