@@ -1,11 +1,11 @@
 # API Reference - Mnemomon (Mega)
 
-## Class: UMnemomon
+## Class: Mnemomon
 
 ### Constructor
 
 ```python
-UMnemomon(config: Optional[Dict[str, Any]] = None)
+Mnemomon(config: Optional[Dict[str, Any]] = None)
 ```
 
 Config keys:
