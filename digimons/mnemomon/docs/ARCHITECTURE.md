@@ -11,7 +11,7 @@ Mnemomon es un módulo de ciberseguridad implementado como parte del **DIGIMON C
 
 ### 1. Core Module (`core.py`)
 
-Contiene la clase principal `UMnemomon` con lógica Mega:
+Contiene la clase principal `Mnemomon` con lógica Mega:
 
 - `calculate_checksum()` - Hash seguro por chunks (SHA-512 por defecto)
 - `verify_integrity()` - Checksum + permisos + alertas de cifrado

@@ -5,13 +5,13 @@ Basic usage example for Mnemomon
 import sys
 sys.path.insert(0, '../src')
 
-from Mnemomon.core import UMnemomon
+from Mnemomon.core import Mnemomon
 from Mnemomon.utils import setup_logging
 
 
 def main():
     setup_logging(level="INFO")
-    digimon = UMnemomon()
+    digimon = Mnemomon()
     
     print("=== Digimon Info ===")
     info = digimon.get_info()

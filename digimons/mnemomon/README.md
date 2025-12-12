@@ -30,9 +30,9 @@ pip install mnemomon
 ### Uso Básico (verificación puntual)
 
 ```python
-from mnemomon import UMnemomon
+from mnemomon import Mnemomon
 
-digimon = UMnemomon()
+digimon = Mnemomon()
 
 # Verificar integridad de un backup con checksum esperado
 result = digimon.analyze(
@@ -45,9 +45,9 @@ print(result)
 ### Auditoría de carpeta completa
 
 ```python
-from mnemomon import UMnemomon
+from mnemomon import Mnemomon
 
-digimon = UMnemomon(config={"min_retention_days": 30})
+digimon = Mnemomon(config={"min_retention_days": 30})
 
 audit = digimon.analyze(directory_path="/backups/daily")
 print(audit)

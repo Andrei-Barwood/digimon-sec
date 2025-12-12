@@ -23,7 +23,7 @@
 
 ### Added
 - Initial release
-- Core UMnemomon class
+- Core Mnemomon class
 - Basic analysis functionality
 - Data validation
 - Logging utilities
