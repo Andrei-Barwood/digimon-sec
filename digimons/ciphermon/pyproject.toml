@@ -1,0 +1,78 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "ciphermon"
+version = "3.0.0"
+description = "Ciphermon Mega - encryption posture, policy checks, and safe crypto helpers"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Kirtan Teg Singh", email = "dev@example.com"}]
+requires-python = ">=3.10"
+keywords = ["cybersecurity", "digimon", "encryption", "crypto", "ciphermon"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Security :: Cryptography",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.4.0",
+    "isort>=5.12.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/digimon-sec-suite"
+Documentation = "https://github.com/yourusername/digimon-sec-suite"
+Repository = "https://github.com/yourusername/digimon-sec-suite/tree/main/digimons/ciphermon"
+Issues = "https://github.com/yourusername/digimon-sec-suite/issues"
+
+[tool.poetry]
+packages = [{include = "ciphermon", from = "src"}]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "--strict-markers"
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 100
+skip_glob = [".venv", "venv"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+ignore_missing_imports = true

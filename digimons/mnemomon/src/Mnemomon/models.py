@@ -5,12 +5,14 @@ Define Pydantic models for type validation and documentation.
 """
 
 from typing import Any, Dict, List, Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 
 class DigimonConfig(BaseModel):
     """Configuration model for Mnemomon"""
     
+    model_config = ConfigDict(frozen=True)
+
     name: str = Field(default="Mnemomon", description="Digimon name")
     hash_algorithm: str = Field(default="sha512", description="Hash algorithm for integrity checks")
     min_retention_days: int = Field(default=30, ge=1, description="Minimum retention period in days")
@@ -18,10 +20,6 @@ class DigimonConfig(BaseModel):
     verify_permissions: bool = Field(default=True, description="Verify file permissions for hygiene")
     debug: bool = Field(default=False, description="Enable debug mode")
     timeout: int = Field(default=30, ge=1, description="Request timeout in seconds")
-    
-    class Config:
-        """Pydantic config"""
-        frozen = True
 
 
 class BackupVerificationResult(BaseModel):

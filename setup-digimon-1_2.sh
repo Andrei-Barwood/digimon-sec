@@ -49,7 +49,7 @@ show_help() {
     cat << EOF
 DIGIMON CYBERSECURITY SUITE - Setup Tool
 
-Uso: ./setup_digimon.sh [opciones]
+Uso: ./setup-digimon-1_2.sh [opciones]
 
 Opciones:
   --name NAME             Nombre del Digimon (requerido)
@@ -64,7 +64,7 @@ Opciones:
   --help                  Muestra esta ayuda
 
 Ejemplo:
-  ./setup_digimon.sh \\
+  ./setup-digimon-1_2.sh \\
     --name thirstmon \\
     --mission "Good, Honest Snake Oil" \\
     --role "threat-filter" \\
@@ -97,6 +97,9 @@ if [ -z "$DIGIMON_NAME" ] || [ -z "$MISSION" ] || [ -z "$ROLE" ] || [ -z "$DESCR
     show_help
     exit 1
 fi
+
+# Normalizar nombre en CamelCase (evita prefijos inesperados con sed)
+DIGIMON_CAMEL=$(python3 -c "import sys,re;n=sys.argv[1];print(''.join(p.capitalize() for p in re.split(r'[-\\s]+', n)))" "$DIGIMON_NAME")
 
 BASE_DIR="${BASE_DIR:-.}/digimons"
 DIGIMON_PATH="$BASE_DIR/$DIGIMON_NAME"
@@ -292,7 +295,7 @@ EOF
 
 # Reemplazar variables en README
 replace_in_file "$DIGIMON_PATH/README.md" "{{DIGIMON_NAME}}" "$DIGIMON_NAME"
-replace_in_file "$DIGIMON_PATH/README.md" "{{DIGIMON_CAMEL}}" "$(echo $DIGIMON_NAME | sed 's/^./\U&/' | sed 's/-\(.\)/\U\1/g')"
+replace_in_file "$DIGIMON_PATH/README.md" "{{DIGIMON_CAMEL}}" "$DIGIMON_CAMEL"
 replace_in_file "$DIGIMON_PATH/README.md" "{{MISSION}}" "$MISSION"
 replace_in_file "$DIGIMON_PATH/README.md" "{{ROLE}}" "$ROLE"
 replace_in_file "$DIGIMON_PATH/README.md" "{{ROLE_DISPLAY}}" "$(echo $ROLE | sed 's/-/ /g' | sed 's/\b\(.\)/\U\1/g')"
@@ -456,8 +459,6 @@ from .core import {{DIGIMON_CAMEL}}
 
 __all__ = ["{{DIGIMON_CAMEL}}", "__version__"]
 EOF
-
-DIGIMON_CAMEL=$(echo $DIGIMON_NAME | sed 's/^./\U&/' | sed 's/-\(.\)/\U\1/g')
 
 replace_in_file "$DIGIMON_PATH/src/$DIGIMON_NAME/__init__.py" "{{DIGIMON_NAME}}" "$DIGIMON_NAME"
 replace_in_file "$DIGIMON_PATH/src/$DIGIMON_NAME/__init__.py" "{{DIGIMON_CAMEL}}" "$DIGIMON_CAMEL"
