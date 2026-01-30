@@ -1,38 +1,3 @@
-# API Reference - Ciphermon (Mega)
-
-## Class: Ciphermon
-
-### Constructor
-```python
-Ciphermon(config: Optional[Dict[str, Any]] = None)
-```
-Config keys:
-- `default_cipher`: str, default "AES-256-GCM"
-- `min_key_bits`: int, default 256
-- `allow_legacy`: bool, default False
-- `require_aead`: bool, default True
-
-### Métodos
-- `generate_key(bits=None) -> str`  
-  Llave aleatoria urlsafe base64.
-
-- `encrypt(plaintext, key=None) -> EncryptionResult`  
-  Cifrado simulado + HMAC-SHA256.
-
-- `decrypt(ciphertext_b64, key) -> EncryptionResult`  
-  Descifrado simulado + HMAC.
-
-- `check_policy(cipher, key_bits, aead) -> PolicyCheck`  
-  Valida tamaño, AEAD y legacy.
-
-- `analyze(cipher=None, key_bits=None, aead=None, plaintext=None) -> AnalysisResult`  
-  Ejecuta política y opcional cifrado simulado.
-
-- `validate(data) -> bool`  
-  Valida entrada básica.
-
-- `get_info() -> dict`  
-  Metadata del Digimon.
 # API Reference - ciphermon
 
 ## Class: Ciphermon
@@ -43,11 +8,102 @@ Config keys:
 Ciphermon(config: Optional[Dict[str, Any]] = None)
 ```
 
-### Methods
+**Parámetros de Configuración:**
 
-- `analyze()` - Execute main analysis
-- `validate(data)` - Validate input data
-- `get_info()` - Get Digimon metadata
+- `default_cipher`: Configura default_cipher (Default: `"AES-256-GCM"`)
+
+### Métodos Principales
+
+#### `generate_key(bits)`
+
+Genera una llave aleatoria con el tamaño solicitado (bits).
+
+#### `encrypt(plaintext, key)`
+
+Cifra de forma simulada y devuelve datos + HMAC.
+
+#### `decrypt(ciphertext_b64, key)`
+
+Descifra simulando (base64) y verifica HMAC.
+
+#### `check_policy(cipher, key_bits, aead)`
+
+Sin documentación.
+
+#### `analyze(cipher, key_bits, aead, plaintext)`
+
+Evalúa política de cifrado y opcionalmente ejecuta cifrado simulado.
+
+#### `validate(data)`
+
+Sin documentación.
+
+#### `get_info()`
+
+Sin documentación.
+
+
+
+## Modelos de Datos
+
+### DigimonConfig
+
+Configuration model for ciphermon.
+
+**Campos:**
+- `name`
+- `default_cipher`
+- `min_key_bits`
+- `allow_legacy`
+- `require_aead`
+- `debug`
+
+### PolicyCheck
+
+Result of a crypto policy evaluation.
+
+**Campos:**
+- `cipher`
+- `key_bits`
+- `aead`
+- `compliant`
+- `warnings`
+- `errors`
+
+### EncryptionResult
+
+Result of encrypt/decrypt helper.
+
+**Campos:**
+- `status`
+- `message`
+- `data`
+- `errors`
+
+### AnalysisResult
+
+High-level analysis output.
+
+**Campos:**
+- `status`
+- `message`
+- `data`
+- `errors`
+
+### DigimonInfo
+
+Information model for Digimon metadata.
+
+**Campos:**
+- `name`
+- `mission`
+- `role`
+- `status`
+- `default_cipher`
+- `min_key_bits`
+- `version`
+
+
 
 ---
 

@@ -18,10 +18,19 @@ pip install thirstmon
 git clone https://github.com/yourusername/digimon-sec-suite.git
 cd digimon-sec-suite/digimons/thirstmon
 python -m venv venv
-source venv/bin/activate
+source venv/bin/activate  # En Windows: venv\Scripts\activate
 pip install -e ".[dev]"
+```
+
+## Verificación de Instalación
+
+```python
+from thirstmon.core import Thirstmon
+
+digimon = Thirstmon()
+print(digimon.get_info())
 ```
 
 ---
 
-Ver también: [USAGE.md](USAGE.md), [README.md](../README.md)
+Ver también: [USAGE.md](USAGE.md), [API.md](API.md), [ARCHITECTURE.md](ARCHITECTURE.md)

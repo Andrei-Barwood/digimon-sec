@@ -1,42 +1,3 @@
-# Guía de Uso - Ciphermon (Mega)
-
-## Instalación rápida
-```bash
-pip install -e .
-```
-
-## Ejemplos
-
-### Evaluar política
-```python
-from ciphermon import Ciphermon
-
-digimon = Ciphermon()
-res = digimon.analyze(cipher="AES-256-GCM", key_bits=256, aead=True)
-print(res)
-```
-
-### Cifrado simulado + integridad
-```python
-from ciphermon import Ciphermon
-
-digimon = Ciphermon()
-enc = digimon.encrypt("hola digimundo")
-print(enc)
-dec = digimon.decrypt(enc.data["ciphertext"], enc.data["key"])
-print(dec)
-```
-
-### Política con alerta legacy
-```python
-from ciphermon import Ciphermon
-
-digimon = Ciphermon()
-res = digimon.analyze(cipher="AES-128-CBC", key_bits=128, aead=False)
-print(res)
-```
-
-Ver también: [API.md](API.md), [ARCHITECTURE.md](ARCHITECTURE.md)
 # Guía de Uso - ciphermon
 
 ## Inicio Rápido
@@ -52,10 +13,63 @@ pip install -e .
 ```python
 from ciphermon.core import Ciphermon
 
+# Crear instancia
 digimon = Ciphermon()
+
+# Ejecutar análisis principal
+# Nota: Revise API.md para ver los argumentos específicos de analyze()
 result = digimon.analyze()
 print(result)
 ```
+
+## Configuración Avanzada
+
+Puede configurar ciphermon pasando un diccionario al constructor:
+
+```python
+digimon = Ciphermon(config={
+    "default_cipher": "AES-256-GCM",  # Configura default_cipher
+})
+```
+
+## Ejemplos de Uso
+
+### Análisis Completo
+
+```python
+from ciphermon.core import Ciphermon
+
+digimon = Ciphermon()
+
+# Ejecutar análisis (ajuste los parámetros según sus necesidades)
+result = digimon.analyze()
+
+if result.status == "success":
+    print(f"Operación exitosa: {result.message}")
+    print("Datos:", result.data)
+elif result.status == "warning":
+    print(f"Advertencia: {result.message}")
+else:
+    print(f"Error: {result.message}")
+    print("Errores:", result.errors)
+```
+
+### Validación de Datos
+
+```python
+data = "..." # Datos a validar
+if digimon.validate(data):
+    print("Datos válidos para procesamiento")
+else:
+    print("Datos inválidos")
+```
+
+## Mejores Prácticas (2025-2026)
+
+1. **Configuración Mínima**: Comience con la configuración por defecto y ajuste según necesidad.
+2. **Manejo de Errores**: Verifique siempre `result.status` antes de procesar `result.data`.
+3. **Logs**: Configure el nivel de logging adecuado para producción vs desarrollo.
+4. **Validación**: Use el método `validate()` antes de procesar datos externos no confiables.
 
 ---
 

@@ -1,24 +1,3 @@
-# Instalación - Ciphermon
-
-## Requisitos
-- Python 3.10+
-- pip o poetry
-
-## PyPI (cuando se publique)
-```bash
-pip install ciphermon
-```
-
-## Código fuente
-```bash
-git clone https://github.com/yourusername/digimon-sec-suite.git
-cd digimon-sec-suite/digimons/ciphermon
-python -m venv venv
-source venv/bin/activate
-pip install -e ".[dev]"
-```
-
-Ver también: [USAGE.md](USAGE.md), [README.md](../README.md)
 # Guía de Instalación - ciphermon
 
 ## Requisitos Previos
@@ -39,10 +18,19 @@ pip install ciphermon
 git clone https://github.com/yourusername/digimon-sec-suite.git
 cd digimon-sec-suite/digimons/ciphermon
 python -m venv venv
-source venv/bin/activate
+source venv/bin/activate  # En Windows: venv\Scripts\activate
 pip install -e ".[dev]"
+```
+
+## Verificación de Instalación
+
+```python
+from ciphermon.core import Ciphermon
+
+digimon = Ciphermon()
+print(digimon.get_info())
 ```
 
 ---
 
-Ver también: [USAGE.md](USAGE.md), [README.md](../README.md)
+Ver también: [USAGE.md](USAGE.md), [API.md](API.md), [ARCHITECTURE.md](ARCHITECTURE.md)

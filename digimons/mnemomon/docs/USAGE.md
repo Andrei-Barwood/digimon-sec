@@ -1,4 +1,4 @@
-# Guía de Uso - Mnemomon (Mega)
+# Guía de Uso - mnemomon
 
 ## Inicio Rápido
 
@@ -13,26 +13,63 @@ pip install -e .
 ```python
 from mnemomon.core import Mnemomon
 
+# Crear instancia
 digimon = Mnemomon()
 
-# Verificación puntual con checksum esperado
-result = digimon.analyze(
-    backup_path="/path/to/backup.tar.gz",
-    expected_checksum="abc123..."
-)
+# Ejecutar análisis principal
+# Nota: Revise API.md para ver los argumentos específicos de analyze()
+result = digimon.analyze()
 print(result)
 ```
 
-## Auditoría de carpeta completa
+## Configuración Avanzada
+
+Puede configurar mnemomon pasando un diccionario al constructor:
 
 ```python
-from mnemomon.core import mnemomon
-
-digimon = Mnemomon(config={"min_retention_days": 30})
-
-audit = digimon.analyze(directory_path="/backups/daily")
-print(audit)
+digimon = Mnemomon(config={
+    "hash_algorithm": "sha512",  # Configura hash_algorithm
+})
 ```
+
+## Ejemplos de Uso
+
+### Análisis Completo
+
+```python
+from mnemomon.core import Mnemomon
+
+digimon = Mnemomon()
+
+# Ejecutar análisis (ajuste los parámetros según sus necesidades)
+result = digimon.analyze()
+
+if result.status == "success":
+    print(f"Operación exitosa: {result.message}")
+    print("Datos:", result.data)
+elif result.status == "warning":
+    print(f"Advertencia: {result.message}")
+else:
+    print(f"Error: {result.message}")
+    print("Errores:", result.errors)
+```
+
+### Validación de Datos
+
+```python
+data = "..." # Datos a validar
+if digimon.validate(data):
+    print("Datos válidos para procesamiento")
+else:
+    print("Datos inválidos")
+```
+
+## Mejores Prácticas (2025-2026)
+
+1. **Configuración Mínima**: Comience con la configuración por defecto y ajuste según necesidad.
+2. **Manejo de Errores**: Verifique siempre `result.status` antes de procesar `result.data`.
+3. **Logs**: Configure el nivel de logging adecuado para producción vs desarrollo.
+4. **Validación**: Use el método `validate()` antes de procesar datos externos no confiables.
 
 ---
 

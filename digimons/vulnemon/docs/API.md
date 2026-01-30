@@ -8,11 +8,104 @@
 Vulnemon(config: Optional[Dict[str, Any]] = None)
 ```
 
-### Methods
+**Parámetros de Configuración:**
 
-- `analyze()` - Execute main analysis
-- `validate(data)` - Validate input data
-- `get_info()` - Get Digimon metadata
+- `severity_threshold`: Configura severity_threshold (Default: `"medium"`)
+
+### Métodos Principales
+
+#### `scan_target(target)`
+
+Escanea un objetivo en busca de vulnerabilidades.
+
+Args:
+    target: Objetivo a escanear (ej: "openssl-1.0.2")
+
+Returns:
+    ScanResult con vulnerabilidades encontradas
+
+#### `analyze(target, targets)`
+
+Ejecuta escaneo: un objetivo o múltiples.
+
+Args:
+    target: Objetivo individual a escanear
+    targets: Lista de objetivos a escanear
+
+Returns:
+    AnalysisResult con resultados del escaneo
+
+#### `validate(data)`
+
+Valida datos de entrada.
+
+#### `get_info()`
+
+Obtener información del Digimon.
+
+
+
+## Modelos de Datos
+
+### DigimonConfig
+
+Configuration model for vulnemon
+
+**Campos:**
+- `name`
+- `severity_threshold`
+- `check_cves`
+- `scan_depth`
+- `debug`
+
+### Vulnerability
+
+Vulnerability information
+
+**Campos:**
+- `cve_id`
+- `severity`
+- `description`
+- `affected_component`
+- `recommendation`
+
+### ScanResult
+
+Result of vulnerability scan
+
+**Campos:**
+- `total_vulnerabilities`
+- `critical_count`
+- `high_count`
+- `medium_count`
+- `low_count`
+- `vulnerabilities`
+- `scan_summary`
+
+### AnalysisResult
+
+Result model for analysis operations
+
+**Campos:**
+- `status`
+- `message`
+- `data`
+- `errors`
+
+### DigimonInfo
+
+Information model for Digimon metadata
+
+**Campos:**
+- `name`
+- `mission`
+- `role`
+- `status`
+- `severity_threshold`
+- `scan_depth`
+- `version`
+
+
 
 ---
 

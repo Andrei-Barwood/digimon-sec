@@ -1,4 +1,4 @@
-# API Reference - Mnemomon (Mega)
+# API Reference - mnemomon
 
 ## Class: Mnemomon
 
@@ -8,34 +8,111 @@
 Mnemomon(config: Optional[Dict[str, Any]] = None)
 ```
 
-Config keys:
-- `hash_algorithm`: "sha512" (default), "sha256", "blake2b", "blake2s"
-- `min_retention_days`: int, default 30
-- `check_encryption`: bool, default True
-- `verify_permissions`: bool, default True
+**Parámetros de Configuración:**
 
-### Methods
+- `hash_algorithm`: Configura hash_algorithm (Default: `"sha512"`)
 
-- `calculate_checksum(file_path, algorithm=None)` → str  
-  Calcula checksum seguro leyendo en chunks.
+### Métodos Principales
 
-- `verify_integrity(file_path, expected_checksum=None)` → `BackupVerificationResult`  
-  Verifica checksum, permisos y alerta sobre posible falta de cifrado.
+#### `calculate_checksum(file_path, algorithm)`
 
-- `audit_backup_directory(directory_path)` → `AuditResult`  
-  Audita una carpeta completa de backups, suma resultados y alerta por retención.
+Calcular checksum seguro leyendo en chunks para minimizar memoria.
 
-- `check_retention_policy(backup_paths)` → dict  
-  Clasifica backups según política de retención mínima.
+#### `verify_integrity(file_path, expected_checksum)`
 
-- `analyze(backup_path=None, directory_path=None, expected_checksum=None)` → `AnalysisResult`  
-  Orquesta verificaciones (archivo puntual o carpeta completa).
+Verifica integridad y controles de superficie (permisos, cifrado indicativo).
 
-- `validate(data)` → bool  
-  Valida rutas únicas o listas de rutas.
+#### `audit_backup_directory(directory_path)`
 
-- `get_info()` → dict  
-  Metadata del Digimon (hash, retención, estado).
+Audita un directorio de backups completo.
+
+#### `check_retention_policy(backup_paths)`
+
+Verifica cumplimiento de retención mínima.
+
+#### `analyze(backup_path, directory_path, expected_checksum)`
+
+Ejecuta análisis principal: archivo individual o carpeta completa.
+
+#### `validate(data)`
+
+Valida rutas individuales o listas de rutas.
+
+#### `get_info()`
+
+Obtener información del Digimon.
+
+
+
+## Modelos de Datos
+
+### DigimonConfig
+
+Configuration model for Mnemomon
+
+**Campos:**
+- `name`
+- `hash_algorithm`
+- `min_retention_days`
+- `check_encryption`
+- `verify_permissions`
+- `debug`
+- `timeout`
+
+### BackupVerificationResult
+
+Result model for backup verification operations
+
+**Campos:**
+- `file_path`
+- `exists`
+- `checksum`
+- `checksum_algorithm`
+- `integrity_verified`
+- `file_size`
+- `last_modified`
+- `errors`
+- `warnings`
+
+### AuditResult
+
+Result model for directory audit operations
+
+**Campos:**
+- `directory`
+- `audit_timestamp`
+- `total_backups`
+- `verified_backups`
+- `corrupted_backups`
+- `old_backups`
+- `backup_details`
+- `summary`
+
+### AnalysisResult
+
+Result model for analysis operations
+
+**Campos:**
+- `status`
+- `message`
+- `data`
+- `errors`
+
+### DigimonInfo
+
+Information model for Digimon metadata
+
+**Campos:**
+- `name`
+- `mission`
+- `role`
+- `status`
+- `hash_algorithm`
+- `min_retention_days`
+- `supported_algorithms`
+- `version`
+
+
 
 ---
 

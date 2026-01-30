@@ -18,10 +18,19 @@ pip install vulnemon
 git clone https://github.com/yourusername/digimon-sec-suite.git
 cd digimon-sec-suite/digimons/vulnemon
 python -m venv venv
-source venv/bin/activate
+source venv/bin/activate  # En Windows: venv\Scripts\activate
 pip install -e ".[dev]"
+```
+
+## Verificación de Instalación
+
+```python
+from vulnemon.core import Vulnemon
+
+digimon = Vulnemon()
+print(digimon.get_info())
 ```
 
 ---
 
-Ver también: [USAGE.md](USAGE.md), [README.md](../README.md)
+Ver también: [USAGE.md](USAGE.md), [API.md](API.md), [ARCHITECTURE.md](ARCHITECTURE.md)

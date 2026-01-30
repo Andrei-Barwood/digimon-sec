@@ -3,7 +3,15 @@ Unit tests for Ciphermon (Mega)
 """
 
 import base64
+import sys
 from pathlib import Path
+
+# Add src directory to Python path for local imports
+# This ensures imports work both when running directly and with pytest
+ROOT = Path(__file__).resolve().parents[1]
+SRC = ROOT / "src"
+if str(SRC) not in sys.path:
+    sys.path.insert(0, str(SRC))
 
 import pytest
 

@@ -18,10 +18,19 @@ pip install policymon
 git clone https://github.com/yourusername/digimon-sec-suite.git
 cd digimon-sec-suite/digimons/policymon
 python -m venv venv
-source venv/bin/activate
+source venv/bin/activate  # En Windows: venv\Scripts\activate
 pip install -e ".[dev]"
+```
+
+## Verificación de Instalación
+
+```python
+from policymon.core import Policymon
+
+digimon = Policymon()
+print(digimon.get_info())
 ```
 
 ---
 
-Ver también: [USAGE.md](USAGE.md), [README.md](../README.md)
+Ver también: [USAGE.md](USAGE.md), [API.md](API.md), [ARCHITECTURE.md](ARCHITECTURE.md)

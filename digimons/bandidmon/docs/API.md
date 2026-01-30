@@ -1,18 +1,100 @@
 # API Reference - bandidmon
 
-## Class: Ubandidmon
+## Class: Bandidmon
 
 ### Constructor
 
 ```python
-Ubandidmon(config: Optional[Dict[str, Any]] = None)
+Bandidmon(config: Optional[Dict[str, Any]] = None)
 ```
 
-### Methods
+**Parámetros de Configuración:**
 
-- `analyze()` - Execute main analysis
-- `validate(data)` - Validate input data
-- `get_info()` - Get Digimon metadata
+- `redaction_mode`: Configura redaction_mode (Default: `"mask"`)
+
+### Métodos Principales
+
+#### `redact_pii(text)`
+
+Redacta PII de un texto.
+
+Args:
+    text: Texto a redactar
+
+Returns:
+    RedactionResult con resultados
+
+#### `analyze(text, texts)`
+
+Ejecuta análisis: un texto o múltiples.
+
+Args:
+    text: Texto individual
+    texts: Lista de textos
+
+Returns:
+    AnalysisResult con resultados
+
+#### `validate(data)`
+
+Valida datos de entrada.
+
+#### `get_info()`
+
+Obtener información del Digimon.
+
+
+
+## Modelos de Datos
+
+### DigimonConfig
+
+Configuration model for bandidmon
+
+**Campos:**
+- `name`
+- `redaction_mode`
+- `preserve_format`
+- `enable_ip_detection`
+- `enable_ssn_detection`
+- `enable_phone_detection`
+- `debug`
+
+### RedactionResult
+
+Result of data redaction
+
+**Campos:**
+- `original_text`
+- `safe_text`
+- `redacted_items`
+- `statistics`
+- `total_redacted`
+
+### AnalysisResult
+
+Result model for analysis operations
+
+**Campos:**
+- `status`
+- `message`
+- `data`
+- `errors`
+
+### DigimonInfo
+
+Information model for Digimon metadata
+
+**Campos:**
+- `name`
+- `mission`
+- `role`
+- `status`
+- `redaction_mode`
+- `supported_types`
+- `version`
+
+
 
 ---
 
