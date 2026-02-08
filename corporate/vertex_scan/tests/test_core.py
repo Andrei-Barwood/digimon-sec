@@ -13,7 +13,7 @@ if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
 import pytest
-from Vertex Scan.core import VertexScan
+from vertex_scan.core import VertexScan
 
 
 @pytest.fixture

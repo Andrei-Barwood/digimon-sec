@@ -14,8 +14,8 @@ if str(SRC) not in sys.path:
 
 import pytest
 
-from LemniscateMnemo.core import LemniscateMnemo
-from LemniscateMnemo.models import AnalysisResult, BackupVerificationResult
+from lemniscate_mnemo.core import LemniscateMnemo
+from lemniscate_mnemo.models import AnalysisResult, BackupVerificationResult
 
 
 @pytest.fixture
