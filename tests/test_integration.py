@@ -1,6 +1,6 @@
 """
 Integration tests for SecurityPipeline
-Verifica que Thirstmon y Bandidmon trabajen correctamente juntos
+Verifica que Helix Filter y Simplex Secret trabajen correctamente juntos
 """
 
 import pytest
@@ -57,5 +57,5 @@ class TestSecurityPipeline:
         info = pipeline.get_pipeline_info()
         
         assert 'pipeline_version' in info
-        assert len(info['digimons_active']) == 2
+        assert len(info['modules_active']) == 2
         assert len(info['phases']) == 2

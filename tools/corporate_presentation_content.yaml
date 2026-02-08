@@ -1,0 +1,665 @@
+# Contenido por dominio para PRESENTACION_CORPORATIVA.md
+# Claves: titulo_rubro, descripcion, con_vs_sin_rows, beneficios, ejemplo_vida, ganancia_invertir, perdida_no_invertir, diferenciador
+
+compliance:
+  titulo_rubro: "Cumplimiento normativo (GDPR, HIPAA, PCI-DSS, SOX, ISO 27001)"
+  descripcion: "Gestionar el cumplimiento regulatorio de forma centralizada y auditable reduce riesgos legales y refuerza la confianza de clientes y socios."
+  con_vs_sin_rows:
+    - ["Evidencia auditable continua", "✅ Trazabilidad total", "❌ Parches manuales sin trazabilidad"]
+    - ["Alertas proactivas ante desvíos", "✅ Detección temprana", "❌ Hallazgos en auditoría externa"]
+    - ["Tiempo de preparación para auditoría", "✅ Días", "❌ Semanas o meses"]
+  beneficios: "Reducción de multas y sanciones; menor estrés del equipo legal; ventaja en licitaciones que exigen certificaciones."
+  ejemplo_vida: "Una clínica evita una sanción de 1,2 M€ por demostrar con evidencias automáticas que el tratamiento de datos cumple HIPAA."
+  ganancia_invertir: "Un responsable de cumplimiento con nuestra herramienta puede cubrir más marcos y entornos; el ROI se mide en multas evitadas y auditorías aprobadas a la primera."
+  perdida_no_invertir: "Multas (hasta 4% facturación o 20 M€ en GDPR), pérdida de contratos, daño reputacional y fuga de talento por estrés en auditorías."
+  diferenciador: "Marcos múltiples en una sola plataforma; lenguaje técnico y jurídico alineado; informes listos para auditor externo."
+
+compliance-cloud:
+  titulo_rubro: "Cumplimiento en entornos cloud"
+  descripcion: "El cumplimiento en la nube exige visibilidad continua sobre configuraciones, acceso y datos. Sin ella, cada cambio puede convertirse en un riesgo."
+  con_vs_sin_rows:
+    - ["Visibilidad sobre configuraciones cloud", "✅ Continua y automatizada", "❌ Puntual o manual"]
+    - ["Detección de desvíos", "✅ Inmediata", "❌ Tras inspección o brecha"]
+    - ["Tiempo para corregir antes de auditoría", "✅ Semanas", "❌ Días o horas"]
+  beneficios: "Cumplimiento alineado con CIS, ISO 27001 y requisitos cloud; menos sorpresas en auditorías; equipos DevOps y Legal alineados."
+  ejemplo_vida: "Un e-commerce en AWS corrige buckets S3 públicos y políticas IAM desalineadas antes de que un auditor los cite, gracias a dashboards y reglas predefinidas."
+  ganancia_invertir: "Un ingeniero cloud con esta capacidad gestiona el cumplimiento de múltiples cuentas y regiones; las auditorías pasan de proyecto anual a proceso continuo."
+  perdida_no_invertir: "No conformidades en auditoría, revocación de certificaciones, cláusulas contractuales incumplidas y posibles rescisiones de contrato con clientes enterprise."
+  diferenciador: "Reglas listas para AWS, Azure y GCP; integración con IaC; informes ejecutivos y técnicos en un solo lugar."
+
+cloud-security:
+  titulo_rubro: "Seguridad y configuración en la nube"
+  descripcion: "Configuraciones incorrectas en la nube son una de las principales causas de brechas. Auditar y endurecer configuraciones de forma sistemática es clave."
+  con_vs_sin_rows:
+    - ["Estado de seguridad de recursos cloud", "✅ Conocido y documentado", "❌ Desconocido o asumido"]
+    - ["Cifrado, MFA y logging", "✅ Verificados de forma automática", "❌ Revisión manual esporádica"]
+    - ["Tiempo para detectar misconfig", "✅ Horas", "❌ Semanas o tras un incidente"]
+  beneficios: "Menor superficie de ataque; alineación con mejores prácticas (CIS Benchmarks); preparación para seguros y auditorías."
+  ejemplo_vida: "Una startup evita una filtración al detectar y corregir una base de datos sin cifrado en reposo y un bucket expuesto públicamente antes de que sea explotado."
+  ganancia_invertir: "Un equipo pequeño mantiene varios entornos cloud seguros; la inversión en la herramienta y en una persona dedicada se recupera con una sola brecha evitada."
+  perdida_no_invertir: "Filtraciones por misconfig, costes de respuesta a incidentes, primas de ciberseguridad más altas y pérdida de confianza de clientes y partners."
+  diferenciador: "Checks listos para estándares actuales; priorización por impacto; recomendaciones accionables y remediación guiada."
+
+iam:
+  titulo_rubro: "Gestión de identidades y accesos (IAM)"
+  descripcion: "El control de quién accede a qué determina el límite del daño en caso de compromiso. IAM bien gestionado es la base de la seguridad corporativa."
+  con_vs_sin_rows:
+    - ["Visibilidad de permisos y roles", "✅ Clara y actualizada", "❌ Dispersa o desactualizada"]
+    - ["Detección de privilegios excesivos", "✅ Automática", "❌ Manual o por queja"]
+    - ["Tiempo para revocar acceso", "✅ Minutos", "❌ Días o tras un incidente"]
+  beneficios: "Menor riesgo de abuso interno o externo; cumplimiento de principio de mínimo privilegio; onboarding y offboarding más rápidos y seguros."
+  ejemplo_vida: "Una empresa revoca en minutos los accesos de un empleado que dejó la organización, evitando que pueda seguir entrando a sistemas críticos por cuentas olvidadas."
+  ganancia_invertir: "Un responsable de IAM con nuestra solución gestiona cientos de identidades y aplicaciones; menos errores humanos y auditorías de acceso más rápidas."
+  perdida_no_invertir: "Cuentas huérfanas, permisos acumulados, accesos no revocados y mayor impacto en caso de robo de credenciales o insider malintencionado."
+  diferenciador: "Análisis de permisos en tiempo práctico; recomendaciones de mínimo privilegio; soporte para múltiples proveedores y aplicaciones."
+
+vpc:
+  titulo_rubro: "Redes privadas y segmentación (VPC)"
+  descripcion: "La segmentación de red limita el movimiento lateral de atacantes y contiene fugas. Monitorear y validar VPCs es esencial en entornos híbridos y multi-nube."
+  con_vs_sin_rows:
+    - ["Visibilidad de flujos y segmentación", "✅ Continua", "❌ Parcial o estática"]
+    - ["Detección de reglas demasiado abiertas", "✅ Automática", "❌ Manual"]
+    - ["Contención ante incidente", "✅ Por segmento", "❌ Toda la red en riesgo"]
+  beneficios: "Menor blast radius; cumplimiento de requisitos de segmentación; mejor preparación para respuesta a incidentes."
+  ejemplo_vida: "Un banco contiene un malware en una VLAN de oficina gracias a segmentación bien definida y monitoreada, evitando que llegue a sistemas de pagos."
+  ganancia_invertir: "Un equipo de red y seguridad mantiene la segmentación correcta y documentada; las auditorías de red dejan de ser un proyecto de meses."
+  perdida_no_invertir: "Movimiento lateral sin control, propagación de ransomware, incumplimiento de estándares (PCI-DSS, etc.) y costes altos de contención."
+  diferenciador: "Mapa de segmentación y flujos; reglas alineadas con buenas prácticas; integración con firewall y cloud."
+
+firewall:
+  titulo_rubro: "Firewall y políticas de red"
+  descripcion: "Las reglas de firewall definen qué tráfico entra y sale. Reglas desordenadas o demasiado permisivas abren puertas invisibles a atacantes."
+  con_vs_sin_rows:
+    - ["Estado de reglas y coherencia", "✅ Revisado y documentado", "❌ Caótico o heredado"]
+    - ["Detección de reglas peligrosas", "✅ Automática", "❌ Solo en auditoría"]
+    - ["Tiempo para endurecer políticas", "✅ Días", "❌ Meses o nunca"]
+  beneficios: "Superficie de ataque reducida; menos falsos positivos; cumplimiento de políticas de seguridad de red."
+  ejemplo_vida: "Una universidad evita que un atacante explote un puerto abierto innecesario al identificar y cerrar reglas legacy con nuestra herramienta."
+  ganancia_invertir: "Un administrador de firewall con nuestra solución mantiene políticas coherentes en varios dispositivos; menos cortes por cambios mal planificados."
+  perdida_no_invertir: "Puertos y servicios expuestos sin necesidad, intrusiones no detectadas, incumplimiento de políticas y parches de emergencia costosos."
+  diferenciador: "Análisis de reglas y recomendaciones; simulación de cambios; documentación automática de políticas."
+
+s3:
+  titulo_rubro: "Almacenamiento seguro (S3 y objetos)"
+  descripcion: "Los buckets y contenedores de objetos suelen contener datos sensibles. Un mal ajuste de permisos o cifrado puede exponer información crítica."
+  con_vs_sin_rows:
+    - ["Estado de permisos y cifrado", "✅ Verificado", "❌ Desconocido o inseguro"]
+    - ["Detección de buckets públicos", "✅ Inmediata", "❌ Tras filtración o auditoría"]
+    - ["Exposición de datos sensibles", "✅ Evitada", "❌ Riesgo constante"]
+  beneficios: "Protección de datos en reposo y en tránsito; cumplimiento de normativas; menor riesgo de filtración masiva."
+  ejemplo_vida: "Una aseguradora detecta y corrige buckets con datos de clientes accesibles por error, evitando una filtración y una sanción millonaria."
+  ganancia_invertir: "Un responsable de datos o cloud con la herramienta audita y corrige cientos de buckets; una sola filtración evitada paga la inversión."
+  perdida_no_invertir: "Filtraciones de datos, sanciones GDPR/PCI/HIPAA, pérdida de clientes y costes de notificación y remediación."
+  diferenciador: "Checks específicos para S3 y compatibles; priorización por sensibilidad; remediación guiada y reportes para compliance."
+
+rds:
+  titulo_rubro: "Bases de datos gestionadas (RDS y equivalentes)"
+  descripcion: "Las bases de datos concentran el activo más valioso. Cifrado, parches, acceso y backups deben estar bajo control y revisión continua."
+  con_vs_sin_rows:
+    - ["Estado de cifrado y parches", "✅ Conocido", "❌ Asumido o desactualizado"]
+    - ["Acceso y permisos", "✅ Revisados", "❌ Acumulados o sin revisión"]
+    - ["Backups y recuperación", "✅ Verificados", "❌ Sin pruebas o incompletos"]
+  beneficios: "Protección del dato crítico; cumplimiento (PCI-DSS, HIPAA); recuperación ante desastre asegurada."
+  ejemplo_vida: "Un retailer verifica que sus BBDD de pagos están cifradas y con backups probados, aprobando una auditoría PCI sin hallazgos críticos."
+  ganancia_invertir: "Un DBA o ingeniero cloud con la solución mantiene el estado de seguridad de múltiples instancias; menos incidentes y auditorías más rápidas."
+  perdida_no_invertir: "Filtraciones de BBDD, imposibilidad de recuperación, incumplimiento normativo y paradas prolongadas del negocio."
+  diferenciador: "Checks para RDS y motores habituales; integración con backups y cifrado; informes listos para auditoría."
+
+kubernetes:
+  titulo_rubro: "Seguridad en Kubernetes y orquestación"
+  descripcion: "Los clústeres Kubernetes son objetivo frecuente de atacantes. Configuraciones de pods, redes y secretos deben estar endurecidas y monitoreadas."
+  con_vs_sin_rows:
+    - ["Estado de hardening del clúster", "✅ Evaluado", "❌ Desconocido"]
+    - ["Secretos y configuraciones sensibles", "✅ Gestionados de forma segura", "❌ En manifiestos o variables"]
+    - ["Tiempo para detectar desvíos", "✅ Horas", "❌ Semanas o tras ataque"]
+  beneficios: "Clústeres alineados con CIS Kubernetes Benchmark; menor riesgo de cryptominers y escapes de contenedor; cumplimiento en entornos cloud nativos."
+  ejemplo_vida: "Un equipo DevOps corrige permisos de service accounts y políticas de red en clústeres antes de que un scan de seguridad los cite en producción."
+  ganancia_invertir: "Un SRE o security engineer con nuestra herramienta mantiene varios clústeres; la inversión se justifica con un solo incidente evitado."
+  perdida_no_invertir: "Clústeres comprometidos, minería de criptomonedas, robo de secretos y paradas de servicios críticos."
+  diferenciador: "Reglas alineadas con CIS y OWASP; soporte multi-nube y on-prem; integración con CI/CD y políticas como código."
+
+docker:
+  titulo_rubro: "Contenedores y imágenes seguras"
+  descripcion: "Imágenes mal construidas o sin escanear introducen vulnerabilidades y malware en los entornos. La seguridad debe integrarse en el ciclo de vida del contenedor."
+  con_vs_sin_rows:
+    - ["Calidad y vulnerabilidades de imágenes", "✅ Escaneada", "❌ Sin revisión"]
+    - ["Buenas prácticas en Dockerfile", "✅ Validadas", "❌ Heredadas o inseguras"]
+    - ["Tiempo para detectar imagen vulnerable", "✅ En build/despliegue", "❌ Tras explotación"]
+  beneficios: "Menor superficie de ataque; cumplimiento de políticas de construcción; menos incidentes por imágenes base inseguras."
+  ejemplo_vida: "Una fintech evita desplegar una imagen con una CVE crítica gracias al escaneo en pipeline; el fallo se corrige antes de producción."
+  ganancia_invertir: "DevOps y seguridad integran controles en el pipeline; menos parches de emergencia y menor riesgo en producción."
+  perdida_no_invertir: "Contenedores vulnerables en producción, incidentes por CVEs conocidas y retrasos por bloqueos de seguridad a última hora."
+  diferenciador: "Integración en CI/CD; reglas de imagen y capas; priorización por entorno y criticidad."
+
+iac:
+  titulo_rubro: "Infraestructura como código (Terraform, etc.)"
+  descripcion: "La infraestructura definida como código permite revisar la seguridad antes de desplegar. Sin análisis, el mismo código puede replicar fallos en todos los entornos."
+  con_vs_sin_rows:
+    - ["Revisión de seguridad del código IaC", "✅ Automática en cada cambio", "❌ Manual o inexistente"]
+    - ["Detección de configuraciones inseguras", "✅ En commit/PR", "❌ En producción"]
+    - ["Desvíos respecto a políticas", "✅ Bloqueables en pipeline", "❌ Descubiertos después"]
+  beneficios: "Shift-left de seguridad; menos infraestructura mal configurada; cumplimiento y consistencia entre entornos."
+  ejemplo_vida: "Un equipo detecta en un PR que un nuevo módulo Terraform abre un puerto innecesario y lo corrige antes de merge, evitando desplegar el riesgo."
+  ganancia_invertir: "Desarrolladores y plataforma integran checks en cada cambio; una persona puede mantener políticas y revisar múltiples repos."
+  perdida_no_invertir: "Misconfigs replicadas en todos los entornos, incidentes repetidos y retrabajo costoso para corregir en producción."
+  diferenciador: "Soporte Terraform y lenguajes habituales; reglas alineadas con cloud y compliance; integración en Git y CI/CD."
+
+resource-usage:
+  titulo_rubro: "Uso y optimización de recursos"
+  descripcion: "El uso anómalo de recursos puede indicar abuso, cryptominers o ineficiencia. Monitorear y analizar patrones ayuda a seguridad y a costes."
+  con_vs_sin_rows:
+    - ["Visibilidad de uso por recurso y cuenta", "✅ Clara", "❌ Dispersa o inexistente"]
+    - ["Detección de picos anómalos", "✅ Automática", "❌ Solo cuando factura impacta"]
+    - ["Correlación uso vs. seguridad", "✅ Integrada", "❌ Separada"]
+  beneficios: "Detección temprana de abuso; optimización de costes; datos para decisiones de capacidad y seguridad."
+  ejemplo_vida: "Una empresa detecta un cryptominer por un pico de CPU en un servidor poco usado y lo aísla antes de que la factura cloud se dispare."
+  ganancia_invertir: "Un responsable de FinOps o seguridad con la herramienta correlaciona uso y riesgo; la inversión se recupera con ahorro y un incidente evitado."
+  perdida_no_invertir: "Facturas cloud descontroladas, cryptominers sin detectar y falta de datos para optimizar y auditar."
+  diferenciador: "Vista unificada uso-seguridad; alertas configurables; integración con facturación y SIEM."
+
+cost:
+  titulo_rubro: "Control de costes y gobernanza cloud"
+  descripcion: "Los costes cloud sin control generan sorpresas y desvíos presupuestarios. Visibilidad y alertas permiten gobernar el gasto sin frenar la innovación."
+  con_vs_sin_rows:
+    - ["Visibilidad del gasto por proyecto/servicio", "✅ Actualizada", "❌ Agregada o tardía"]
+    - ["Alertas ante desvíos", "✅ Configurables", "❌ Solo al cierre del mes"]
+    - ["Toma de decisiones", "✅ Con datos", "❌ Intuitiva o reactiva"]
+  beneficios: "Presupuestos bajo control; detección de fugas y abusos; justificación de inversión y ROI."
+  ejemplo_vida: "Un departamento recibe una alerta de que el gasto en una cuenta de desarrollo supera el umbral y corrige recursos mal apagados, ahorrando miles al mes."
+  ganancia_invertir: "Un responsable de FinOps o control de gasto con la herramienta gestiona múltiples cuentas; el ahorro suele superar ampliamente el coste de la solución."
+  perdida_no_invertir: "Facturas inesperadas, proyectos bloqueados por sobrecoste y falta de trazabilidad para auditoría y dirección."
+  diferenciador: "Métricas de coste y seguridad en un mismo lugar; alertas y presupuestos; reportes para dirección y compliance."
+
+backup:
+  titulo_rubro: "Backup, continuidad y recuperación"
+  descripcion: "Los backups son la última línea de defensa ante ransomware y fallos. Verificar que existen, son restaurables y están protegidos es no negociable."
+  con_vs_sin_rows:
+    - ["Existencia y periodicidad de backups", "✅ Verificada", "❌ Asumida"]
+    - ["Pruebas de restauración", "✅ Regulares", "❌ Esporádicas o ninguna"]
+    - ["Protección de copias (inmutabilidad, aislamiento)", "✅ Garantizada", "❌ Vulnerable"]
+  beneficios: "Recuperación ante desastre asegurada; resistencia ante ransomware; cumplimiento de SLA y normativas."
+  ejemplo_vida: "Una empresa afectada por ransomware restaura servicios en horas desde copias verificadas e inmutables, evitando pagar rescate y paradas prolongadas."
+  ganancia_invertir: "Un responsable de continuidad con la herramienta asegura que todos los sistemas críticos tienen backup válido; una sola recuperación exitosa justifica la inversión."
+  perdida_no_invertir: "Pérdida de datos irrecuperables, rescates a ransomware, incumplimiento contractual y cierre operativo temporal o permanente."
+  diferenciador: "Verificación continua de backups; integración con proveedores cloud y on-prem; reportes para auditoría y dirección."
+
+scast:
+  titulo_rubro: "Análisis estático de código (SAST/SCAST)"
+  descripcion: "Encontrar vulnerabilidades en el código antes de desplegar reduce el riesgo y el coste de corrección. El análisis estático es la base del shift-left."
+  con_vs_sin_rows:
+    - ["Detección de vulnerabilidades en código", "✅ En desarrollo", "❌ En producción o tras brecha"]
+    - ["Cobertura de lenguajes y frameworks", "✅ Amplia", "❌ Limitada o manual"]
+    - ["Tiempo para corregir", "✅ Antes de merge", "❌ Parches de emergencia"]
+  beneficios: "Menos vulnerabilidades en producción; equipos de desarrollo formados en seguridad; cumplimiento de SDLC seguro."
+  ejemplo_vida: "Un desarrollador corrige una inyección SQL detectada por el análisis en su PR; el fallo nunca llega a producción ni a un pentest."
+  ganancia_invertir: "Desarrolladores integran el escaneo en su flujo; un security champion o equipo AppSec mantiene reglas y priorización; menos coste que corregir en producción."
+  perdida_no_invertir: "Vulnerabilidades conocidas en producción, incidentes evitables y retrabajo y parches urgentes que afectan plazos y moral."
+  diferenciador: "Reglas actualizadas para lenguajes y frameworks modernos; baja tasa de falsos positivos; integración en IDE y pipeline."
+
+privacy:
+  titulo_rubro: "Privacidad y protección de datos personales"
+  descripcion: "La privacidad es un derecho y una obligación legal. Gestionar el ciclo de vida de los datos personales de forma transparente y auditable es clave."
+  con_vs_sin_rows:
+    - ["Inventario y flujos de datos personales", "✅ Documentados", "❌ Desconocidos o dispersos"]
+    - ["Ejercicio de derechos (acceso, rectificación, supresión)", "✅ Soportado", "❌ Manual o imposible"]
+    - ["Riesgo de re-identificación", "✅ Evaluado", "❌ Ignorado"]
+  beneficios: "Cumplimiento GDPR y leyes locales; confianza del usuario; menor riesgo de sanciones y demandas."
+  ejemplo_vida: "Un usuario ejerce su derecho al olvido; la empresa localiza y elimina sus datos en todos los sistemas en plazos legales gracias a un proceso apoyado por la herramienta."
+  ganancia_invertir: "Un DPO o equipo legal con la solución gestiona solicitudes y evidencias; las multas evitadas y la reputación justifican la inversión."
+  perdida_no_invertir: "Sanciones de hasta 4% de facturación, pérdida de clientes y daño reputacional por mal manejo de datos personales."
+  diferenciador: "Mapa de datos personales y flujos; soporte para derechos y consentimiento; informes para autoridad y auditoría."
+
+pci-dss:
+  titulo_rubro: "Cumplimiento PCI-DSS (datos de pago)"
+  descripcion: "Quien procesa, almacena o transmite datos de tarjeta debe cumplir PCI-DSS. La no conformidad implica multas, bloqueo de pagos y responsabilidad ante brechas."
+  con_vs_sin_rows:
+    - ["Estado de controles PCI-DSS", "✅ Verificado", "❌ Asumido o desactualizado"]
+    - ["Alcance y segmentación", "✅ Definidos", "❌ Amplio o confuso"]
+    - ["Preparación para auditoría (QSA)", "✅ Continua", "❌ Último momento"]
+  beneficios: "Menor riesgo de multas y restricciones; capacidad de seguir procesando pagos; confianza de adquirentes y marcas."
+  ejemplo_vida: "Un comercio online pasa la auditoría anual sin hallazgos críticos gracias a evidencias y controles gestionados con nuestra solución."
+  ganancia_invertir: "Un responsable de cumplimiento PCI con la herramienta mantiene el estado de conformidad; el coste de la solución es una fracción de una multa o de perder la capacidad de cobrar."
+  perdida_no_invertir: "Multas, restricción o pérdida de capacidad de pago, responsabilidad en brechas y costes de remediación y notificación."
+  diferenciador: "Controles mapeados a requisitos PCI-DSS; evidencias y reportes para QSA; guía de segmentación y alcance."
+
+hipaa:
+  titulo_rubro: "Cumplimiento HIPAA (datos de salud)"
+  descripcion: "En salud, la protección de la información de pacientes es legal y ética. Los controles HIPAA deben estar implementados, documentados y revisados."
+  con_vs_sin_rows:
+    - ["Controles administrativos, técnicos y físicos", "✅ Documentados y verificados", "❌ Parciales o en papel"]
+    - ["Acceso a PHI y auditoría", "✅ Trazable", "❌ Sin registro o sin revisión"]
+    - ["Preparación para auditoría OCR", "✅ Continua", "❌ Reactiva"]
+  beneficios: "Cumplimiento normativo; confianza de pacientes y partners; menor riesgo de sanciones y demandas."
+  ejemplo_vida: "Un hospital demuestra en una inspección que el acceso a historiales está controlado y auditado, evitando sanciones y titulares negativos."
+  ganancia_invertir: "Un responsable de cumplimiento o seguridad con la herramienta mantiene el estado HIPAA en múltiples sistemas; una sanción evitada paga la inversión muchas veces."
+  perdida_no_invertir: "Sanciones OCR, demandas civiles, pérdida de contratos con aseguradoras y daño irreparable a la reputación."
+  diferenciador: "Controles alineados con HIPAA; evidencias y reportes para auditoría; soporte para BAA y evaluación de proveedores."
+
+gdpr:
+  titulo_rubro: "Cumplimiento GDPR y protección de datos en Europa"
+  descripcion: "El Reglamento Europeo exige legitimidad, minimización, seguridad y capacidad de demostrar cumplimiento. La accountability es central."
+  con_vs_sin_rows:
+    - ["Registro de actividades de tratamiento", "✅ Actualizado", "❌ Incompleto o desactualizado"]
+    - ["Ejercicio de derechos (acceso, portabilidad, olvido)", "✅ En plazos", "❌ Con retrasos o incumplimientos"]
+    - ["Evidencia para autoridad", "✅ Disponible", "❌ Dispersa o inexistente"]
+  beneficios: "Cumplimiento legal; confianza de usuarios y socios europeos; reducción del riesgo de multas de hasta 20 M€ o 4% de facturación global."
+  ejemplo_vida: "Una startup B2B europea gana un contrato enterprise al demostrar con evidencias automatizadas que cumple GDPR y que puede soportar auditorías."
+  ganancia_invertir: "Un DPO o equipo legal con la herramienta gestiona tratamientos y derechos; la inversión se recupera con una multa evitada o un contrato ganado."
+  perdida_no_invertir: "Multas millonarias, órdenes de limitar tratamiento, pérdida de clientes en la UE y bloqueo de operaciones hasta adecuación."
+  diferenciador: "Soporte para registro de actividades, DPIA y derechos; informes para autoridad y auditoría; enfoque en accountability."
+
+tokenization:
+  titulo_rubro: "Tokenización de datos sensibles"
+  descripcion: "Sustituir datos sensibles por tokens reduce el riesgo de exposición y el alcance del cumplimiento. La des-tokenización debe estar controlada y auditada."
+  con_vs_sin_rows:
+    - ["Exposición de datos sensibles en sistemas", "✅ Minimizada (solo tokens)", "❌ Datos en claro en múltiples sistemas"]
+    - ["Control de des-tokenización", "✅ Auditado y restringido", "❌ Amplio o sin registro"]
+    - ["Alcance de cumplimiento (PCI, etc.)", "✅ Reducido", "❌ Amplio y costoso"]
+  beneficios: "Menor superficie de ataque; cumplimiento más sencillo; flexibilidad para analytics y desarrollo sin exponer datos reales."
+  ejemplo_vida: "Un procesador de pagos tokeniza números de tarjeta; solo el sistema autorizado des-tokeniza, reduciendo alcance PCI y riesgo de filtración."
+  ganancia_invertir: "Un equipo de datos o seguridad con la solución gestiona tokenización en varios flujos; menos sistemas en alcance de auditoría y menos riesgo."
+  perdida_no_invertir: "Datos sensibles en claro en entornos no necesarios, mayor alcance normativo y riesgo de filtración masiva."
+  diferenciador: "Tokenización reversible y no reversible; políticas granulares; auditoría de acceso y des-tokenización."
+
+scraping:
+  titulo_rubro: "Protección frente a scraping y abuso de datos"
+  descripcion: "El scraping no autorizado puede robar datos, sobrecargar servicios y dañar la ventaja competitiva. Detectar y mitigar es parte de la defensa perimetral."
+  con_vs_sin_rows:
+    - ["Detección de scraping y bots abusivos", "✅ Automática", "❌ Manual o tardía"]
+    - ["Protección de datos y precios", "✅ Activa", "❌ Expuestos"]
+    - ["Impacto en disponibilidad y coste", "✅ Controlado", "❌ Picos y facturas inesperadas"]
+  beneficios: "Protección de datos y lógica de negocio; menor abuso de APIs y webs; control de costes de infraestructura."
+  ejemplo_vida: "Un comparador de precios detecta y limita un bot que extraía ofertas masivamente, protegiendo su ventaja y reduciendo carga en servidores."
+  ganancia_invertir: "Un equipo de seguridad o producto con la herramienta monitorea y responde a patrones de abuso; la inversión se justifica con un solo caso de robo de datos evitado."
+  perdida_no_invertir: "Pérdida de datos valiosos, ventaja competitiva erosionada, sobrecoste de infraestructura y posibles demandas por uso indebido."
+  diferenciador: "Detección por comportamiento y firma; integración con WAF y CDN; alertas y respuestas automatizables."
+
+masking:
+  titulo_rubro: "Enmascaramiento de datos sensibles"
+  descripcion: "En entornos de desarrollo, testing o analytics, los datos deben estar enmascarados para no exponer información real ni incumplir normativas."
+  con_vs_sin_rows:
+    - ["Datos en entornos no productivos", "✅ Enmascarados", "❌ Reales o parcialmente expuestos"]
+    - ["Re-identificación", "✅ Impedida", "❌ Posible"]
+    - ["Cumplimiento en copias y reportes", "✅ Garantizado", "❌ En riesgo"]
+  beneficios: "Cumplimiento en dev/test; menos riesgo de fugas desde entornos secundarios; equipos pueden trabajar con datos realistas sin ver datos reales."
+  ejemplo_vida: "Un banco entrega copias de BBDD enmascaradas a un equipo externo; el proyecto avanza sin exponer datos de clientes y sin incumplir políticas."
+  ganancia_invertir: "Un responsable de datos o QA con la herramienta enmascara múltiples fuentes; una filtración desde un entorno de test evitada justifica la inversión."
+  perdida_no_invertir: "Filtraciones desde dev/test, incumplimiento de políticas y normativas y pérdida de confianza de clientes y reguladores."
+  diferenciador: "Políticas de enmascaramiento por tipo de dato y contexto; soporte para BBDD y archivos; trazabilidad y auditoría."
+
+hashing:
+  titulo_rubro: "Integridad y hashing seguro"
+  descripcion: "El hashing permite verificar integridad y almacenar contraseñas o identificadores de forma no reversible. Algoritmos débiles o mal usados comprometen la seguridad."
+  con_vs_sin_rows:
+    - ["Algoritmos y parámetros de hash", "✅ Actuales y seguros", "❌ MD5/SHA1 o mal configurados"]
+    - ["Verificación de integridad", "✅ Automatizada", "❌ Manual o inexistente"]
+    - ["Protección de credenciales", "✅ Con salt y funciones adecuadas", "❌ Débil o en claro"]
+  beneficios: "Integridad de artefactos y datos; almacenamiento seguro de contraseñas; cumplimiento de estándares y auditorías."
+  ejemplo_vida: "Una empresa verifica que sus binarios en distribución no han sido alterados comparando hashes; un ataque de supply chain es detectado antes de despliegue."
+  ganancia_invertir: "Un equipo de desarrollo o seguridad estandariza hashing y verificación; menos incidentes por contraseñas débiles o artefactos manipulados."
+  perdida_no_invertir: "Contraseñas crackeables, artefactos alterados sin detección y no conformidad en auditorías de seguridad."
+  diferenciador: "Recomendaciones por tipo de uso; integración en pipelines y almacenes; soporte para estándares actuales (NIST, etc.)."
+
+encryption:
+  titulo_rubro: "Cifrado de datos en reposo y en tránsito"
+  descripcion: "El cifrado es la base de la confidencialidad. Claves mal gestionadas o algoritmos débiles dejan los datos expuestos aunque estén \"cifrados\"."
+  con_vs_sin_rows:
+    - ["Cifrado en reposo y en tránsito", "✅ Verificado", "❌ Parcial o inexistente"]
+    - ["Gestión de claves (rotación, almacenamiento)", "✅ Controlada", "❌ Ad hoc o insegura"]
+    - ["Algoritmos y longitudes", "✅ Actuales", "❌ Débiles o deprecados"]
+  beneficios: "Confidencialidad garantizada; cumplimiento de normativas; menor impacto en caso de robo de medios o interceptación."
+  ejemplo_vida: "Un robo de portátiles no se convierte en filtración porque los discos están cifrados y las claves no están en el dispositivo."
+  ganancia_invertir: "Un responsable de seguridad o infra con la herramienta asegura cifrado en todos los sistemas críticos; una brecha evitada o limitada paga la inversión."
+  perdida_no_invertir: "Datos en claro ante robo o interceptación, sanciones por incumplimiento y pérdida de confianza de clientes y socios."
+  diferenciador: "Cobertura de reposo y tránsito; guía de gestión de claves; integración con HSM y servicios cloud."
+
+anonymization:
+  titulo_rubro: "Anonimización de datos"
+  descripcion: "Datos anonimizados permiten análisis y compartir información sin exponer identidades. Una anonimización mal hecha permite re-identificación y incumple la ley."
+  con_vs_sin_rows:
+    - ["Riesgo de re-identificación", "✅ Evaluado y bajo", "❌ Alto o no evaluado"]
+    - ["Técnicas y parámetros", "✅ Aplicados correctamente", "❌ Superficiales o incorrectos"]
+    - ["Cumplimiento (GDPR, etc.)", "✅ Demostrable", "❌ En duda"]
+  beneficios: "Uso de datos para analytics e I+D sin tratar datos personales; cumplimiento normativo; publicación y compartición con terceros de forma segura."
+  ejemplo_vida: "Un hospital comparte conjuntos de datos anonimizados con investigadores; la evaluación de riesgo de re-identificación permite hacerlo dentro de la ley."
+  ganancia_invertir: "Un responsable de datos o privacidad con la herramienta anonimiza y evalúa riesgos en múltiples conjuntos; proyectos que antes no eran viables por ley pasan a serlo."
+  perdida_no_invertir: "Re-identificación y filtración de datos \"anonimizados\", sanciones y daño reputacional y bloqueo de proyectos de analytics."
+  diferenciador: "Técnicas actuales (k-anonimidad, diferencial privacy, etc.); evaluación de riesgo; documentación para autoridad y auditoría."
+
+redaction:
+  titulo_rubro: "Redacción de información sensible"
+  descripcion: "Documentos, logs y reportes suelen contener datos sensibles. Redactar de forma consistente evita fugas y cumple políticas de retención y divulgación."
+  con_vs_sin_rows:
+    - ["Detección y redacción en documentos", "✅ Automática", "❌ Manual o incompleta"]
+    - ["Consistencia entre sistemas", "✅ Políticas centralizadas", "❌ Criterios dispares"]
+    - ["Cumplimiento en divulgación", "✅ Garantizado", "❌ Riesgo de exposición"]
+  beneficios: "Protección en compartir documentos; cumplimiento de solicitudes de información y auditorías; menos fugas por error humano."
+  ejemplo_vida: "Una asesoría entrega documentación judicial con datos personales y comerciales redactados de forma automática, cumpliendo plazos y ley."
+  ganancia_invertir: "Un equipo legal o de cumplimiento con la herramienta redacta grandes volúmenes de documentos; una filtración evitada o una demanda por divulgación indebida justifica la inversión."
+  perdida_no_invertir: "Filtraciones por documentos no redactados, sanciones y demandas y bloqueo de compartir información por miedo al error."
+  diferenciador: "Políticas por tipo de dato y contexto; soporte para PDF, logs y texto; auditoría de redacciones aplicadas."
+
+dlp:
+  titulo_rubro: "Prevención de pérdida de datos (DLP)"
+  descripcion: "Evitar que datos sensibles salgan del perímetro por email, USB, cloud o aplicaciones es central. DLP bien configurado detecta y bloquea fugas."
+  con_vs_sin_rows:
+    - ["Detección de datos sensibles en flujos", "✅ En tiempo real", "❌ Tardía o inexistente"]
+    - ["Bloqueo y alertas", "✅ Configurados", "❌ Solo registro o ninguno"]
+    - ["Cobertura (email, endpoints, cloud)", "✅ Amplia", "❌ Parcial"]
+  beneficios: "Menor riesgo de filtración; cumplimiento de políticas; respuesta rápida ante intentos de exfiltración."
+  ejemplo_vida: "Un empleado intenta enviar una base de datos de clientes por email; DLP bloquea el envío y alerta, evitando una filtración y una sanción."
+  ganancia_invertir: "Un equipo de seguridad con la solución define políticas y responde a alertas; una sola filtración evitada suele superar el coste total de la solución."
+  perdida_no_invertir: "Filtraciones por canales no controlados, sanciones GDPR/PCI/HIPAA y daño reputacional y legal."
+  diferenciador: "Políticas por tipo de dato y canal; baja tasa de falsos positivos; integración con email, endpoints y CASB."
+
+threat-intel:
+  titulo_rubro: "Inteligencia de amenazas e IOCs"
+  descripcion: "Conocer indicadores de compromiso (IPs, dominios, hashes) y correlacionarlos con tráfico y eventos permite detectar y bloquear amenazas de forma temprana."
+  con_vs_sin_rows:
+    - ["Detección de IOCs en tráfico y archivos", "✅ Automática", "❌ Manual o inexistente"]
+    - ["Actualización de fuentes de inteligencia", "✅ Integrada", "❌ Manual o desactualizada"]
+    - ["Tiempo para detectar y contener", "✅ Minutos u horas", "❌ Días o tras daño"]
+  beneficios: "Detección proactiva de malware y phishing; bloqueo de tráfico malicioso; respuesta a incidentes más rápida."
+  ejemplo_vida: "Un SOC detecta tráfico hacia un dominio de C2 recién incorporado a una lista de IOCs y bloquea el acceso antes de que el atacante extraiga datos."
+  ganancia_invertir: "Un analista de amenazas o SOC con la herramienta correlaciona IOCs en múltiples fuentes; un incidente evitado o contenido justifica la inversión."
+  perdida_no_invertir: "Infecciones no detectadas, tiempo de permanencia del atacante y daño y coste de remediación multiplicados."
+  diferenciador: "Múltiples fuentes de inteligencia; integración con SIEM y firewall; priorización y contexto por sector y tipo de amenaza."
+
+secrets:
+  titulo_rubro: "Protección de secretos y datos sensibles en texto"
+  descripcion: "Contraseñas, API keys y datos sensibles en logs, código o documentos son un riesgo. Detectar y enmascarar o rotar evita fugas y abusos."
+  con_vs_sin_rows:
+    - ["Detección de secretos en código y logs", "✅ Automática", "❌ Manual o ninguna"]
+    - ["Enmascaramiento y rotación", "✅ Soportados", "❌ Manual o imposible"]
+    - ["Exposición en repositorios o soportes", "✅ Evitada", "❌ Frecuente"]
+  beneficios: "Menor riesgo de robo de credenciales; cumplimiento de políticas; menos incidentes por secretos en Git o logs."
+  ejemplo_vida: "Un desarrollador evita subir una API key a un repo público porque la herramienta la detecta en el pre-commit y bloquea el push."
+  ganancia_invertir: "DevSecOps y desarrollo integran la detección en el pipeline; una credencial robada evitada evita un incidente que puede costar millones."
+  perdida_no_invertir: "Credenciales expuestas en repos o logs, cuentas comprometidas y movimiento lateral del atacante."
+  diferenciador: "Patrones amplios (API keys, contraseñas, tokens); integración en CI/CD y escáneres de repos; remediación y rotación guiada."
+
+ldap:
+  titulo_rubro: "Directorio LDAP y autenticación centralizada"
+  descripcion: "LDAP es el núcleo de identidad en muchas organizaciones. Configuración segura, auditoría de acceso y sincronización evitan abusos y caídas de servicio."
+  con_vs_sin_rows:
+    - ["Configuración segura (TLS, binding)", "✅ Verificada", "❌ Insegura o por defecto"]
+    - ["Auditoría de cambios y accesos", "✅ Activa", "❌ Limitada o inexistente"]
+    - ["Disponibilidad y consistencia", "✅ Monitoreada", "❌ Asumida"]
+  beneficios: "Autenticación centralizada segura; menos cuentas huérfanas y permisos incorrectos; cumplimiento de políticas de identidad."
+  ejemplo_vida: "Un administrador detecta un cambio sospechoso en un grupo de LDAP y revoca el acceso antes de que sea usado para escalar privilegios."
+  ganancia_invertir: "Un administrador de identidad con la herramienta mantiene LDAP seguro y documentado; un solo incidente de abuso de identidad evitado justifica la inversión."
+  perdida_no_invertir: "Accesos no autorizados, caídas de autenticación que paralizan la empresa y auditorías de identidad con hallazgos críticos."
+  diferenciador: "Checks de hardening y mejores prácticas; auditoría de cambios; integración con SIEM y IAM."
+
+authentication:
+  titulo_rubro: "Autenticación segura"
+  descripcion: "La autenticación es la puerta de entrada. Métodos débiles o mal implementados permiten suplantación y acceso no autorizado a sistemas críticos."
+  con_vs_sin_rows:
+    - ["Métodos y políticas de autenticación", "✅ Fuertes y aplicadas", "❌ Débiles o bypassables"]
+    - ["Protección frente a credential stuffing y phishing", "✅ Activa", "❌ Inexistente"]
+    - ["Experiencia de usuario vs. seguridad", "✅ Equilibrada", "❌ Una u otra sacrificada"]
+  beneficios: "Menor riesgo de suplantación; cumplimiento de estándares; confianza de usuarios y socios."
+  ejemplo_vida: "Un banco evita cientos de accesos fraudulentos gracias a políticas de contraseña y detección de intentos de credential stuffing."
+  ganancia_invertir: "Un equipo de identidad con la herramienta mantiene autenticación segura en todas las aplicaciones; el coste de un incidente de suplantación supera ampliamente la inversión."
+  perdida_no_invertir: "Cuentas comprometidas, suplantación de identidad y acceso no autorizado a datos y sistemas."
+  diferenciador: "Soporte para múltiples métodos y protocolos; políticas configurables; integración con MFA y gestores de identidad."
+
+tokens:
+  titulo_rubro: "Gestión segura de tokens (sesión, API)"
+  descripcion: "Los tokens de sesión y API son llaves de acceso. Vida útil, almacenamiento y revocación deben estar controlados para evitar robo y abuso."
+  con_vs_sin_rows:
+    - ["Ciclo de vida y rotación de tokens", "✅ Definido y aplicado", "❌ Indefinido o estático"]
+    - ["Almacenamiento y transmisión", "✅ Seguros", "❌ Expuestos en cliente o logs"]
+    - ["Revocación ante compromiso", "✅ Inmediata", "❌ Lenta o imposible"]
+  beneficios: "Menor riesgo de robo de sesión o API; cumplimiento de OAuth2/OIDC y políticas; control fino de acceso por aplicación."
+  ejemplo_vida: "Una empresa revoca en segundos todos los tokens de una aplicación comprometida, evitando que el atacante siga accediendo a APIs."
+  ganancia_invertir: "Un equipo de desarrollo o seguridad con la herramienta gestiona tokens en múltiples aplicaciones; un abuso evitado justifica la inversión."
+  perdida_no_invertir: "Tokens robados o no revocados, acceso prolongado de atacantes y incumplimiento de estándares y auditorías."
+  diferenciador: "Soporte para JWT, OAuth2, API keys; políticas de expiración y revocación; auditoría de emisión y uso."
+
+oauth:
+  titulo_rubro: "OAuth y autorización delegada"
+  descripcion: "OAuth permite acceso delegado a recursos sin compartir contraseñas. Configuración incorrecta o flujos inseguros exponen cuentas y datos."
+  con_vs_sin_rows:
+    - ["Configuración de clientes y scopes", "✅ Revisada", "❌ Por defecto o excesiva"]
+    - ["Protección frente a ataques (CSRF, redirect)", "✅ Implementada", "❌ Vulnerable"]
+    - ["Auditoría de consentimientos y accesos", "✅ Disponible", "❌ Limitada"]
+  beneficios: "Acceso delegado seguro; cumplimiento de estándares; menor riesgo de abuso de autorizaciones."
+  ejemplo_vida: "Un proveedor de API evita que un cliente mal configurado exponga tokens; un ataque de redirect es bloqueado por validación estricta."
+  ganancia_invertir: "Un equipo de desarrollo o identidad con la herramienta asegura OAuth en todas las integraciones; una brecha por OAuth mal configurado puede costar millones."
+  perdida_no_invertir: "Tokens robados por redirect o CSRF, acceso no autorizado a cuentas de usuario y sanciones y pérdida de confianza."
+  diferenciador: "Validación de flujos y configuraciones; detección de patrones inseguros; guía de remediación y mejores prácticas."
+
+sso:
+  titulo_rubro: "Single Sign-On (SSO) e identidad federada"
+  descripcion: "SSO centraliza el acceso y mejora la experiencia; una brecha en el IdP puede afectar a todas las aplicaciones. La configuración y el monitoreo son críticos."
+  con_vs_sin_rows:
+    - ["Configuración SAML/OIDC y atributos", "✅ Verificada", "❌ Incorrecta o sobreexpuesta"]
+    - ["Protección MFA y detección de anomalías", "✅ Activa", "❌ Débil o inexistente"]
+    - ["Visibilidad de accesos por aplicación", "✅ Centralizada", "❌ Dispersa"]
+  beneficios: "Un solo punto de control de acceso; mejor UX y seguridad; cumplimiento de políticas de identidad."
+  ejemplo_vida: "Una empresa con SSO deshabilita el acceso a todas las aplicaciones de un empleado en un solo lugar en minutos tras su baja."
+  ganancia_invertir: "Un equipo de identidad con la herramienta mantiene SSO seguro en decenas de aplicaciones; el coste de gestionar accesos sin SSO suele ser muy superior."
+  perdida_no_invertir: "Brecha en IdP que afecta a todo el ecosistema, accesos no revocados y auditorías con hallazgos en identidad federada."
+  diferenciador: "Checks para SAML/OIDC y proveedores habituales; detección de misconfig; integración con MFA y SIEM."
+
+mfa:
+  titulo_rubro: "Autenticación multifactor (MFA)"
+  descripcion: "MFA reduce drásticamente el riesgo de suplantación. Implementarlo bien (métodos, políticas y UX) es la diferencia entre adopción real y bypass."
+  con_vs_sin_rows:
+    - ["Cobertura MFA en sistemas críticos", "✅ Completa", "❌ Parcial o inexistente"]
+    - ["Resistencia a phishing y SIM swap", "✅ Métodos robustos", "❌ Solo SMS o email"]
+    - ["Experiencia y adopción", "✅ Alta", "❌ Rechazo o bypass"]
+  beneficios: "Menor riesgo de cuentas comprometidas; cumplimiento de estándares y seguros; confianza de clientes y reguladores."
+  ejemplo_vida: "Un atacante con contraseña robada no puede acceder porque MFA con push o TOTP bloquea el login y alerta al usuario."
+  ganancia_invertir: "Un responsable de identidad con la herramienta despliega y mantiene MFA en toda la organización; un solo incidente de suplantación evitado justifica la inversión."
+  perdida_no_invertir: "Cuentas comprometidas solo con contraseña, seguros y auditorías que exigen MFA no cumplido y brechas evitables."
+  diferenciador: "Soporte para TOTP, push, FIDO2; políticas por aplicación y riesgo; métricas de adopción y cobertura."
+
+privileges:
+  titulo_rubro: "Gestión de privilegios y acceso elevado"
+  descripcion: "Los privilegios elevados son el objetivo de los atacantes. Controlar quién los tiene, cuándo y con qué auditoría limita el daño y el abuso."
+  con_vs_sin_rows:
+    - ["Inventario de cuentas privilegiadas", "✅ Actualizado", "❌ Desconocido o desactualizado"]
+    - ["Uso just-in-time y aprobación", "✅ Implementado", "❌ Privilegios permanentes"]
+    - ["Auditoría de uso", "✅ Completa", "❌ Parcial o inexistente"]
+  beneficios: "Menor superficie de ataque; cumplimiento de principio de mínimo privilegio; respuesta rápida ante uso sospechoso."
+  ejemplo_vida: "Un administrador accede a un servidor crítico solo durante una ventana aprobada; toda la sesión queda registrada y se revoca el acceso al terminar."
+  ganancia_invertir: "Un equipo PAM con la herramienta gestiona privilegios en toda la organización; un abuso o escalada evitados justifican la inversión."
+  perdida_no_invertir: "Privilegios permanentes y sin auditoría, escalada de atacantes y abuso interno sin detección."
+  diferenciador: "Inventario y ciclo de vida de privilegios; integración con PAM y directorios; auditoría y alertas en tiempo práctico."
+
+biometrics:
+  titulo_rubro: "Biometría y autenticación biométrica"
+  descripcion: "La biometría mejora la UX y la seguridad cuando se implementa con estándares de privacidad y anti-spoofing. Mal implementada, crea falsa sensación de seguridad."
+  con_vs_sin_rows:
+    - ["Protección anti-spoofing y liveness", "✅ Activa", "❌ Débil o inexistente"]
+    - ["Almacenamiento y privacidad (template)", "✅ Seguro y minimizado", "❌ Expuesto o centralizado en claro"]
+    - ["Cumplimiento y consentimiento", "✅ Documentado", "❌ En duda"]
+  beneficios: "Autenticación fuerte con buena UX; menor fraude por suplantación; cumplimiento de normativas de biometría."
+  ejemplo_vida: "Un banco evita ataques con fotos o vídeos gracias a detección de liveness; los templates se almacenan de forma que no permiten re-identificación indebida."
+  ganancia_invertir: "Un responsable de identidad o producto con la herramienta asegura que la biometría cumple estándares; un fraude evitado y la confianza del usuario justifican la inversión."
+  perdida_no_invertir: "Spoofing exitoso, filtración de datos biométricos y sanciones y pérdida de confianza por uso incorrecto."
+  diferenciador: "Checks de liveness y estándares; guía de almacenamiento y privacidad; soporte para regulaciones sectoriales."
+
+passwords:
+  titulo_rubro: "Políticas y gestión de contraseñas"
+  descripcion: "Las contraseñas siguen siendo el factor más común. Políticas débiles, reutilización y almacenamiento inseguro causan la mayoría de brechas evitables."
+  con_vs_sin_rows:
+    - ["Políticas (complejidad, rotación, historial)", "✅ Aplicadas", "❌ Débiles o inexistentes"]
+    - ["Detección de contraseñas comprometidas", "✅ Integrada", "❌ No comprobada"]
+    - ["Almacenamiento (hash, salt)", "✅ Seguro", "❌ Débil o en claro"]
+  beneficios: "Menor riesgo de credential stuffing y diccionario; cumplimiento de estándares; base sólida para MFA."
+  ejemplo_vida: "Un empleado es forzado a cambiar su contraseña al detectarse en un dump de brecha; el atacante no puede reutilizarla."
+  ganancia_invertir: "Un equipo de identidad con la herramienta mantiene políticas en toda la organización; la mayoría de brechas empiezan por contraseñas débiles o robadas."
+  perdida_no_invertir: "Cuentas comprometidas por contraseñas reutilizadas o débiles, incumplimiento de auditorías y seguros."
+  diferenciador: "Políticas alineadas con NIST y buenas prácticas; integración con have-i-been-pwned y gestores; reporting de cumplimiento."
+
+sessions:
+  titulo_rubro: "Gestión segura de sesiones"
+  descripcion: "Sesiones largas o no revocables permiten que un atacante use una sesión robada durante mucho tiempo. Control de tiempo, cierre y concurrencia es esencial."
+  con_vs_sin_rows:
+    - ["Duración y timeout de sesión", "✅ Configurados", "❌ Indefinidos o excesivos"]
+    - ["Revocación y cierre en todos los dispositivos", "✅ Soportada", "❌ Parcial o imposible"]
+    - ["Detección de sesiones anómalas", "✅ Activa", "❌ Inexistente"]
+  beneficios: "Menor ventana de abuso ante robo de sesión; cumplimiento de políticas; mejor control en bajas y pérdida de dispositivos."
+  ejemplo_vida: "Un usuario pierde el móvil; cierra todas las sesiones desde otro dispositivo en segundos y el ladrón no puede seguir accediendo."
+  ganancia_invertir: "Un equipo de desarrollo o seguridad con la herramienta aplica políticas de sesión en todas las aplicaciones; una sesión robada limitada en tiempo reduce el daño."
+  perdida_no_invertir: "Sesiones indefinidas, robo de sesión con acceso prolongado y falta de control en bajas y incidentes."
+  diferenciador: "Políticas por aplicación y riesgo; revocación centralizada; integración con IdP y SIEM."
+
+credentials:
+  titulo_rubro: "Gestión de credenciales y secretos"
+  descripcion: "Credenciales y secretos mal almacenados o rotados son la puerta de entrada más común. Un vault centralizado y auditoría reducen el riesgo de forma drástica."
+  con_vs_sin_rows:
+    - ["Almacenamiento centralizado y seguro", "✅ Vault o equivalente", "❌ En código, config o Excel"]
+    - ["Rotación y caducidad", "✅ Automatizada", "❌ Manual o nunca"]
+    - ["Auditoría de acceso", "✅ Completa", "❌ Ninguna"]
+  beneficios: "Menor riesgo de robo de credenciales; cumplimiento de políticas; onboarding y offboarding más seguros."
+  ejemplo_vida: "Un ex empleado no puede seguir usando credenciales porque el vault revocó su acceso y las credenciales compartidas se rotan automáticamente."
+  ganancia_invertir: "Un equipo de seguridad o plataforma con la herramienta gestiona credenciales en toda la organización; una credencial robada evitada evita un incidente grave."
+  perdida_no_invertir: "Credenciales en código o documentos, rotación inexistente y brechas por secretos comprometidos."
+  diferenciador: "Integración con vaults y clouds; rotación y caducidad; auditoría y alertas de acceso."
+
+permissions:
+  titulo_rubro: "Permisos y control de acceso (RBAC/ABAC)"
+  descripcion: "Quién puede hacer qué en cada aplicación debe estar definido y revisado. Permisos acumulados o mal diseñados generan abusos y no conformidades."
+  con_vs_sin_rows:
+    - ["Modelo de permisos (roles, atributos)", "✅ Definido y documentado", "❌ Implícito o caótico"]
+    - ["Revisión y limpieza periódica", "✅ Automatizada", "❌ Manual o nunca"]
+    - ["Auditoría de cambios", "✅ Activa", "❌ Inexistente"]
+  beneficios: "Mínimo privilegio aplicado; cumplimiento de auditorías; menor riesgo de abuso interno y externo."
+  ejemplo_vida: "Una revisión semestral con la herramienta detecta que un rol tenía permisos de eliminación innecesarios y los retira antes de que sean usados por error."
+  ganancia_invertir: "Un responsable de identidad o aplicación con la herramienta mantiene permisos coherentes en múltiples sistemas; un abuso evitado justifica la inversión."
+  perdida_no_invertir: "Permisos excesivos, abusos no detectados y auditorías con hallazgos de control de acceso."
+  diferenciador: "Análisis de roles y permisos; recomendaciones de mínimo privilegio; integración con IAM y aplicaciones."
+
+identity:
+  titulo_rubro: "Gestión de identidad (Identity Governance)"
+  descripcion: "Unificar identidades, ciclos de vida y gobernanza evita cuentas huérfanas, permisos inconsistentes y riesgos de compliance. La identidad bien gobernada es la base."
+  con_vs_sin_rows:
+    - ["Ciclo de vida (alta, baja, cambios)", "✅ Automatizado", "❌ Manual o incompleto"]
+    - ["Revisión de accesos (recertificación)", "✅ Periódica", "❌ Esporádica o ninguna"]
+    - ["Evidencia para auditoría", "✅ Disponible", "❌ Dispersa o inexistente"]
+  beneficios: "Menor riesgo de cuentas huérfanas y permisos incorrectos; cumplimiento de SOX, ISO, etc.; respuesta rápida en bajas y cambios."
+  ejemplo_vida: "Un proceso de baja automatizado revoca accesos en todas las aplicaciones en el mismo día; un auditor comprueba el proceso con evidencias generadas por la herramienta."
+  ganancia_invertir: "Un equipo de IAM o cumplimiento con la herramienta gobierna identidades en toda la organización; el coste de no hacerlo son auditorías fallidas y brechas."
+  perdida_no_invertir: "Cuentas huérfanas, permisos no revocados y no conformidades en auditorías de identidad."
+  diferenciador: "Visión unificada de identidad y acceso; recertificación y aprobaciones; reportes para auditoría y dirección."
+
+fuzzing:
+  titulo_rubro: "Fuzzing y pruebas de resistencia"
+  descripcion: "Encontrar fallos antes que el atacante mediante entradas mal formadas o inesperadas endurece aplicaciones y APIs. El fuzzing es estándar en desarrollo seguro."
+  con_vs_sin_rows:
+    - ["Cobertura de interfaces (API, archivos, UI)", "✅ Sistemática", "❌ Puntual o ninguna"]
+    - ["Detección de crashes y vulnerabilidades", "✅ En CI/CD", "❌ En producción o pentest"]
+    - ["Priorización y remediación", "✅ Integrada", "❌ Manual"]
+  beneficios: "Menos vulnerabilidades en producción; cumplimiento de SDLC seguro; equipos conscientes de riesgos de entrada."
+  ejemplo_vida: "Un fuzzer en pipeline detecta un buffer overflow en un parser de upload; el desarrollador lo corrige antes de release y evita una CVE en producción."
+  ganancia_invertir: "Desarrolladores y AppSec integran fuzzing en el ciclo de vida; un bug crítico encontrado antes de producción ahorra costes y daño reputacional."
+  perdida_no_invertir: "Vulnerabilidades explotables en producción, parches de emergencia y retrasos en proyectos por hallazgos tardíos."
+  diferenciador: "Fuzzing guiado y por cobertura; soporte para múltiples protocolos; integración en pipeline y triaje con desarrollo."
+
+incidents:
+  titulo_rubro: "Gestión de incidentes de seguridad"
+  descripcion: "Responder bien a un incidente limita el daño y el coste. Procesos claros, playbooks y trazabilidad son la diferencia entre caos y contención ordenada."
+  con_vs_sin_rows:
+    - ["Detección y clasificación", "✅ Rápida y consistente", "❌ Tardía o subjetiva"]
+    - ["Contención y erradicación", "✅ Con playbooks", "❌ Ad hoc"]
+    - ["Comunicación y post-mortem", "✅ Documentados", "❌ Informales o inexistentes"]
+  beneficios: "Menor tiempo de impacto; cumplimiento de notificación (GDPR, etc.); aprendizaje y mejora continua."
+  ejemplo_vida: "Un SOC declara incidente, ejecuta el playbook de ransomware, contiene el equipo afectado y notifica a dirección y DPO en menos de dos horas."
+  ganancia_invertir: "Un equipo de respuesta con la herramienta trabaja de forma ordenada; el coste de un incidente mal gestionado puede ser órdenes de magnitud mayor que la inversión."
+  perdida_no_invertir: "Caos en la respuesta, daño extendido, multas por notificación tardía y pérdida de confianza de clientes y socios."
+  diferenciador: "Playbooks y flujos configurables; integración con SIEM y ticketing; reportes para dirección y autoridad."
+
+policy:
+  titulo_rubro: "Políticas de seguridad y cumplimiento"
+  descripcion: "Políticas claras y aplicables son la base de la gobernanza. Traducirlas en controles técnicos y evidencias permite demostrar cumplimiento y mejorar de forma continua."
+  con_vs_sin_rows:
+    - ["Traducción política → controles", "✅ Mapeada", "❌ Implícita o inexistente"]
+    - ["Evidencia de cumplimiento", "✅ Automatizada", "❌ Manual o incompleta"]
+    - ["Revisión y actualización", "✅ Periódica", "❌ Estática o desactualizada"]
+  beneficios: "Gobernanza clara; auditorías más rápidas; alineación entre negocio, legal y técnico."
+  ejemplo_vida: "Una política de \"no datos en claro en logs\" se traduce en reglas técnicas; un informe mensual demuestra cumplimiento al comité de seguridad."
+  ganancia_invertir: "Un responsable de cumplimiento o CISO con la herramienta mantiene políticas vivas y demostrables; las auditorías pasan de proyectos a proceso continuo."
+  perdida_no_invertir: "Políticas en papel no aplicadas, no conformidades en auditorías y falta de dirección en inversión de seguridad."
+  diferenciador: "Mapeo política-controles-evidencia; reportes ejecutivos; soporte para múltiples frameworks."
+
+logs:
+  titulo_rubro: "Análisis de logs y monitorización"
+  descripcion: "Los logs son la memoria del sistema. Analizarlos de forma centralizada permite detectar anomalías, investigar incidentes y cumplir requisitos de retención y auditoría."
+  con_vs_sin_rows:
+    - ["Centralización y retención", "✅ Garantizada", "❌ Dispersa o insuficiente"]
+    - ["Correlación y alertas", "✅ Configuradas", "❌ Manual o inexistente"]
+    - ["Búsqueda e investigación", "✅ Rápida", "❌ Lenta o imposible"]
+  beneficios: "Detección de amenazas e incidentes; investigación forense; cumplimiento de retención y auditoría."
+  ejemplo_vida: "Un analista correlaciona logs de VPN, correo y acceso a ficheros y reconstruye en minutos cómo un atacante exfiltraba datos."
+  ganancia_invertir: "Un equipo SOC o operaciones con la herramienta investiga y responde más rápido; un incidente resuelto en horas en lugar de días ahorra coste y daño."
+  perdida_no_invertir: "Incidentes no detectados, investigaciones imposibles y no conformidad en auditorías y normativas."
+  diferenciador: "Ingesta y normalización multi-fuente; reglas de correlación y alertas; retención y búsqueda escalables."
+
+vulnerabilities:
+  titulo_rubro: "Gestión de vulnerabilidades (VM)"
+  descripcion: "Las vulnerabilidades conocidas son la vía de entrada más predecible. Escanear, priorizar y remediar de forma continua reduce la superficie de ataque."
+  con_vs_sin_rows:
+    - ["Cobertura de activos y CVEs", "✅ Actualizada", "❌ Parcial o desactualizada"]
+    - ["Priorización por contexto y explotabilidad", "✅ Automática", "❌ Solo puntuación CVSS"]
+    - ["Tiempo medio de remediación", "✅ Días o semanas", "❌ Meses o nunca"]
+  beneficios: "Menor superficie de ataque; cumplimiento de estándares y seguros; menos parches de emergencia."
+  ejemplo_vida: "Un equipo prioriza y parchea una CVE crítica en un servidor expuesto en internet en 48 horas gracias a un dashboard de VM actualizado."
+  ganancia_invertir: "Un equipo de VM con la herramienta gestiona miles de activos; una sola explotación evitada justifica años de inversión."
+  perdida_no_invertir: "Explotación de vulnerabilidades conocidas, brechas evitables y multas y primas de seguro más altas."
+  diferenciador: "Priorización por negocio y explotabilidad; integración con escáneres y ticketing; métricas para dirección y auditoría."
+
+network:
+  titulo_rubro: "Seguridad de red y monitorización"
+  descripcion: "Visibilidad del tráfico y de la topología permite detectar anomalías, aplicar políticas y responder a incidentes. Sin ella, la red es una caja negra."
+  con_vs_sin_rows:
+    - ["Visibilidad de flujos y topología", "✅ Continua", "❌ Parcial o estática"]
+    - ["Detección de tráfico malicioso o anómalo", "✅ Automática", "❌ Manual o inexistente"]
+    - ["Contención y respuesta", "✅ Integrada", "❌ Manual y lenta"]
+  beneficios: "Detección de intrusiones y malware; cumplimiento de segmentación; respuesta a incidentes más rápida."
+  ejemplo_vida: "Un SOC detecta tráfico C2 en un segmento de red y lo bloquea en el firewall antes de que el atacante extraiga datos."
+  ganancia_invertir: "Un equipo de red o SOC con la herramienta monitorea toda la red; un incidente contenido en horas en lugar de días justifica la inversión."
+  perdida_no_invertir: "Movimiento lateral sin detectar, tiempo de permanencia del atacante y falta de evidencias para investigación."
+  diferenciador: "Visión unificada de flujos y activos; reglas y alertas configurables; integración con NDR, firewall y SIEM."
+
+forensics:
+  titulo_rubro: "Análisis forense e investigación"
+  descripcion: "Ante un incidente, reconstruir qué pasó, cuándo y quién es esencial para contener, erradicar y demostrar ante autoridades y aseguradoras."
+  con_vs_sin_rows:
+    - ["Preservación de evidencias", "✅ Inmediata y trazable", "❌ Tardía o contaminada"]
+    - ["Análisis de logs y artefactos", "✅ Sistematizado", "❌ Manual y lento"]
+    - ["Informes para autoridad o aseguradora", "✅ Estructurados", "❌ Informales"]
+  beneficios: "Respuesta a incidentes fundamentada; cumplimiento legal y contractual; aprendizaje para mejorar defensas."
+  ejemplo_vida: "Un equipo forense reconstruye la cadena de compromiso de un ransomware en 24 horas y entrega un informe que la aseguradora acepta para la reclamación."
+  ganancia_invertir: "Un equipo de respuesta o externo con la herramienta acelera la investigación; un informe sólido puede ser la diferencia entre que un seguro cubra o no."
+  perdida_no_invertir: "Evidencias perdidas o invalidadas, respuestas a ciegas y rechazo de reclamaciones o sanciones por no poder demostrar diligencia."
+  diferenciador: "Flujos de trabajo forense; preservación y cadena de custodia; plantillas de informe para autoridades y aseguradoras."
+
+cipher:
+  titulo_rubro: "Cifrado y criptografía"
+  descripcion: "Elegir algoritmos, longitudes de clave y modos de operación correctos evita que el cifrado sea una falsa sensación de seguridad. La criptografía bien aplicada es la base."
+  con_vs_sin_rows:
+    - ["Algoritmos y parámetros", "✅ Actuales y seguros", "❌ Débiles o deprecados"]
+    - ["Gestión de claves", "✅ Centralizada y rotada", "❌ Ad hoc o estática"]
+    - ["Cumplimiento (FIPS, etc.)", "✅ Verificado", "❌ Asumido"]
+  beneficios: "Confidencialidad e integridad reales; cumplimiento normativo; preparación para auditorías de cifrado."
+  ejemplo_vida: "Una entidad financiera demuestra en auditoría que todos los canales de pago usan TLS 1.3 y cifrado en reposo con AES-256 y claves rotadas."
+  ganancia_invertir: "Un responsable de seguridad o crypto con la herramienta asegura que no hay configuraciones débiles; una brecha por cifrado débil puede ser catastrófica."
+  perdida_no_invertir: "Cifrado quebrantable, no conformidad en auditorías y exposición de datos que se creían protegidos."
+  diferenciador: "Inventario de uso criptográfico; recomendaciones por estándar; integración con HSM y gestores de claves."
+
+mnemonic:
+  titulo_rubro: "Backup e integridad (mnemónico y checksums)"
+  descripcion: "Verificar que los backups existen, son restaurables y no han sido alterados es la última línea de defensa ante ransomware y fallos. La integridad debe comprobarse."
+  con_vs_sin_rows:
+    - ["Integridad de copias (checksums)", "✅ Verificada", "❌ Asumida o no comprobada"]
+    - ["Retención y cifrado de backups", "✅ Cumplidos", "❌ Inciertos o vulnerables"]
+    - ["Tiempo para detectar corrupción", "✅ Horas", "❌ Solo al restaurar, cuando ya es tarde"]
+  beneficios: "Recuperación ante desastre y ransomware asegurada; cumplimiento de políticas de backup; confianza en la restauración."
+  ejemplo_vida: "Una empresa detecta que un backup fue alterado por un atacante y usa una copia anterior verificada para restaurar sin pagar rescate."
+  ganancia_invertir: "Un responsable de continuidad con la herramienta verifica todos los backups críticos; una sola recuperación exitosa justifica la inversión."
+  perdida_no_invertir: "Backups corruptos o inexistentes, imposibilidad de recuperar y rescates pagados o negocio paralizado."
+  diferenciador: "Verificación continua de integridad; soporte para múltiples formatos y almacenes; reportes para auditoría y dirección."

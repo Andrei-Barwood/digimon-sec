@@ -1,0 +1,24 @@
+name: Test tesseract_health
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - 'corporate/tesseract_health/**'
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.11', '3.12']
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: cd corporate/tesseract_health && pip install -e ".[dev]"
+      - run: cd corporate/tesseract_health && pytest tests/ -v --cov

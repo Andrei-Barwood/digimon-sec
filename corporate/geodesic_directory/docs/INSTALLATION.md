@@ -1,0 +1,36 @@
+# Guía de Instalación - geodesic_directory
+
+## Requisitos Previos
+
+- Python 3.10+
+- pip o poetry
+- Git
+
+## Instalación desde PyPI
+
+```bash
+pip install geodesic_directory
+```
+
+## Instalación desde Código Fuente
+
+```bash
+git clone https://github.com/snocomm-security/snocomm-security-suite.git
+cd snocomm-security-suite/corporate/geodesic_directory
+python -m venv venv
+source venv/bin/activate  # En Windows: venv\Scripts\activate
+pip install -e ".[dev]"
+```
+
+## Verificación de Instalación
+
+```python
+from geodesic_directory.core import GeodesicDirectory
+
+modulo = GeodesicDirectory()
+print(modulo.get_info())
+```
+
+---
+
+Ver también: [PRESENTACION_CORPORATIVA.md](PRESENTACION_CORPORATIVA.md) (documento para comprador), [USAGE.md](USAGE.md), [API.md](API.md), [ARCHITECTURE.md](ARCHITECTURE.md)

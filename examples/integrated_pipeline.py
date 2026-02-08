@@ -1,7 +1,7 @@
 """
 Demostración del Security Pipeline Integrado
 
-Este script muestra cómo Thirstmon y Bandidmon trabajan juntos
+Este script muestra cómo Helix Filter y Simplex Secret trabajan juntos
 para proteger el tráfico web de amenazas y datos sensibles.
 """
 
@@ -91,10 +91,10 @@ def demo_pipeline_info():
     info = pipeline.get_pipeline_info()
     
     print(f"\n📦 Pipeline Version: {info['pipeline_version']}")
-    print("\n🤖 Digimons Activos:")
-    for digimon in info['digimons_active']:
-        print(f"  • {digimon['name']} ({digimon['role']}) - Status: {digimon['status']}")
-    
+    print("\n🤖 Módulos Snocomm activos:")
+    for mod in info['modules_active']:
+        print(f"  • {mod['name']} ({mod['role']}) - Status: {mod['status']}")
+
     print("\n🔄 Fases del Pipeline:")
     for phase in info['phases']:
         print(f"  {phase}")
@@ -104,8 +104,8 @@ def main():
     """Ejecutar todas las demos"""
     print("""
     ╔═══════════════════════════════════════════════════════════╗
-    ║   🎮 DIGIMON SECURITY SUITE - INTEGRATED PIPELINE        ║
-    ║   Thirstmon + Bandidmon trabajando juntos                ║
+    ║   Snocomm Security Suite - Integrated Pipeline            ║
+    ║   Helix Filter + Simplex Secret trabajando juntos         ║
     ╚═══════════════════════════════════════════════════════════╝
     """)
     

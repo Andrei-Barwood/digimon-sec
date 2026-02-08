@@ -1,0 +1,24 @@
+name: Test lemniscate_right
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - 'corporate/lemniscate_right/**'
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.11', '3.12']
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: cd corporate/lemniscate_right && pip install -e ".[dev]"
+      - run: cd corporate/lemniscate_right && pytest tests/ -v --cov

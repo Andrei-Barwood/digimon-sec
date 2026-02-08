@@ -1,0 +1,310 @@
+# Snocomm module manifest: legacy_folder -> new identity (folder, package, class, display_name, domain)
+# Used by generate_docs.py, test_all_modules.py, and refactor scripts.
+# Note: legacy_folder is historical reference only; the active name is folder_name.
+modules:
+  - legacy_folder: compliancemon
+    folder_name: tesseract_covenant
+    package_name: tesseract_covenant
+    class_name: TesseractCovenant
+    display_name: Tesseract Covenant
+    domain: compliance
+  - legacy_folder: compliancecloud
+    folder_name: lemniscate_horizon
+    package_name: lemniscate_horizon
+    class_name: LemniscateHorizon
+    display_name: Lemniscate Horizon
+    domain: compliance-cloud
+  - legacy_folder: cloudsecmon
+    folder_name: fractal_axiom
+    package_name: fractal_axiom
+    class_name: FractalAxiom
+    display_name: Fractal Axiom
+    domain: cloud-security
+  - legacy_folder: iammon
+    folder_name: geodesic_identity
+    package_name: geodesic_identity
+    class_name: GeodesicIdentity
+    display_name: Geodesic Identity
+    domain: iam
+  - legacy_folder: vpcmon
+    folder_name: vertex_stillness
+    package_name: vertex_stillness
+    class_name: VertexStillness
+    display_name: Vertex Stillness
+    domain: vpc
+  - legacy_folder: firewallguard
+    folder_name: hyperplane_guard
+    package_name: hyperplane_guard
+    class_name: HyperplaneGuard
+    display_name: Hyperplane Guard
+    domain: firewall
+  - legacy_folder: s3mon
+    folder_name: torus_vault
+    package_name: torus_vault
+    class_name: TorusVault
+    display_name: Torus Vault
+    domain: s3
+  - legacy_folder: rdsmon
+    folder_name: helix_vault
+    package_name: helix_vault
+    class_name: HelixVault
+    display_name: Helix Vault
+    domain: rds
+  - legacy_folder: kubernetesmon
+    folder_name: polytope_cluster
+    package_name: polytope_cluster
+    class_name: PolytopeCluster
+    display_name: Polytope Cluster
+    domain: kubernetes
+  - legacy_folder: dockermon
+    folder_name: simplex_container
+    package_name: simplex_container
+    class_name: SimplexContainer
+    display_name: Simplex Container
+    domain: docker
+  - legacy_folder: terraformmon
+    folder_name: manifold_code
+    package_name: manifold_code
+    class_name: ManifoldCode
+    display_name: Manifold Code
+    domain: iac
+  - legacy_folder: resourcemon
+    folder_name: lattice_resource
+    package_name: lattice_resource
+    class_name: LatticeResource
+    display_name: Lattice Resource
+    domain: resource-usage
+  - legacy_folder: costmonitor
+    folder_name: geodesic_ledger
+    package_name: geodesic_ledger
+    class_name: GeodesicLedger
+    display_name: Geodesic Ledger
+    domain: cost
+  - legacy_folder: backupcloud
+    folder_name: lemniscate_archive
+    package_name: lemniscate_archive
+    class_name: LemniscateArchive
+    display_name: Lemniscate Archive
+    domain: backup
+  - legacy_folder: SCASTmon
+    folder_name: vertex_scan
+    package_name: vertex_scan
+    class_name: VertexScan
+    display_name: Vertex Scan
+    domain: scast
+  - legacy_folder: privacymon
+    folder_name: fractal_veil
+    package_name: fractal_veil
+    class_name: FractalVeil
+    display_name: Fractal Veil
+    domain: privacy
+  - legacy_folder: pci-dssmon
+    folder_name: helix_standard
+    package_name: helix_standard
+    class_name: HelixStandard
+    display_name: Helix Standard
+    domain: pci-dss
+  - legacy_folder: hipaamon
+    folder_name: tesseract_health
+    package_name: tesseract_health
+    class_name: TesseractHealth
+    display_name: Tesseract Health
+    domain: hipaa
+  - legacy_folder: gdprmon
+    folder_name: lemniscate_right
+    package_name: lemniscate_right
+    class_name: LemniscateRight
+    display_name: Lemniscate Right
+    domain: gdpr
+  - legacy_folder: tokenizemon
+    folder_name: simplex_token
+    package_name: simplex_token
+    class_name: SimplexToken
+    display_name: Simplex Token
+    domain: tokenization
+  - legacy_folder: scrapingmon
+    folder_name: hyperplane_crawl
+    package_name: hyperplane_crawl
+    class_name: HyperplaneCrawl
+    display_name: Hyperplane Crawl
+    domain: scraping
+  - legacy_folder: maskingmon
+    folder_name: fractal_mask
+    package_name: fractal_mask
+    class_name: FractalMask
+    display_name: Fractal Mask
+    domain: masking
+  - legacy_folder: hashmon
+    folder_name: vertex_hash
+    package_name: vertex_hash
+    class_name: VertexHash
+    display_name: Vertex Hash
+    domain: hashing
+  - legacy_folder: encryptionmon
+    folder_name: geodesic_cipher
+    package_name: geodesic_cipher
+    class_name: GeodesicCipher
+    display_name: Geodesic Cipher
+    domain: encryption
+  - legacy_folder: anonymizemon
+    folder_name: lemniscate_anon
+    package_name: lemniscate_anon
+    class_name: LemniscateAnon
+    display_name: Lemniscate Anon
+    domain: anonymization
+  - legacy_folder: redactionmon
+    folder_name: torus_redact
+    package_name: torus_redact
+    class_name: TorusRedact
+    display_name: Torus Redact
+    domain: redaction
+  - legacy_folder: dlpmon
+    folder_name: polytope_dlp
+    package_name: polytope_dlp
+    class_name: PolytopeDlp
+    display_name: Polytope DLP
+    domain: dlp
+  - legacy_folder: thirstmon
+    folder_name: helix_filter
+    package_name: helix_filter
+    class_name: HelixFilter
+    display_name: Helix Filter
+    domain: threat-intel
+  - legacy_folder: bandidmon
+    folder_name: simplex_secret
+    package_name: simplex_secret
+    class_name: SimplexSecret
+    display_name: Simplex Secret
+    domain: secrets
+  - legacy_folder: ldapmon
+    folder_name: geodesic_directory
+    package_name: geodesic_directory
+    class_name: GeodesicDirectory
+    display_name: Geodesic Directory
+    domain: ldap
+  - legacy_folder: authmon
+    folder_name: vertex_auth
+    package_name: vertex_auth
+    class_name: VertexAuth
+    display_name: Vertex Auth
+    domain: authentication
+  - legacy_folder: tokenmon
+    folder_name: torus_token
+    package_name: torus_token
+    class_name: TorusToken
+    display_name: Torus Token
+    domain: tokens
+  - legacy_folder: oauthmon
+    folder_name: lemniscate_oauth
+    package_name: lemniscate_oauth
+    class_name: LemniscateOauth
+    display_name: Lemniscate OAuth
+    domain: oauth
+  - legacy_folder: ssomon
+    folder_name: fractal_sso
+    package_name: fractal_sso
+    class_name: FractalSso
+    display_name: Fractal SSO
+    domain: sso
+  - legacy_folder: mfamon
+    folder_name: tesseract_factor
+    package_name: tesseract_factor
+    class_name: TesseractFactor
+    display_name: Tesseract Factor
+    domain: mfa
+  - legacy_folder: privilegemon
+    folder_name: polytope_privilege
+    package_name: polytope_privilege
+    class_name: PolytopePrivilege
+    display_name: Polytope Privilege
+    domain: privileges
+  - legacy_folder: biometricmon
+    folder_name: helix_biometric
+    package_name: helix_biometric
+    class_name: HelixBiometric
+    display_name: Helix Biometric
+    domain: biometrics
+  - legacy_folder: passwordmon
+    folder_name: simplex_pass
+    package_name: simplex_pass
+    class_name: SimplexPass
+    display_name: Simplex Pass
+    domain: passwords
+  - legacy_folder: sessionmon
+    folder_name: geodesic_session
+    package_name: geodesic_session
+    class_name: GeodesicSession
+    display_name: Geodesic Session
+    domain: sessions
+  - legacy_folder: credentialmon
+    folder_name: vertex_credential
+    package_name: vertex_credential
+    class_name: VertexCredential
+    display_name: Vertex Credential
+    domain: credentials
+  - legacy_folder: permissionmon
+    folder_name: lattice_permission
+    package_name: lattice_permission
+    class_name: LatticePermission
+    display_name: Lattice Permission
+    domain: permissions
+  - legacy_folder: identitymon
+    folder_name: fractal_identity
+    package_name: fractal_identity
+    class_name: FractalIdentity
+    display_name: Fractal Identity
+    domain: identity
+  - legacy_folder: fuzzymon
+    folder_name: manifold_fuzz
+    package_name: manifold_fuzz
+    class_name: ManifoldFuzz
+    display_name: Manifold Fuzz
+    domain: fuzzing
+  - legacy_folder: incidentmon
+    folder_name: helix_incident
+    package_name: helix_incident
+    class_name: HelixIncident
+    display_name: Helix Incident
+    domain: incidents
+  - legacy_folder: policymon
+    folder_name: lattice_policy
+    package_name: lattice_policy
+    class_name: LatticePolicy
+    display_name: Lattice Policy
+    domain: policy
+  - legacy_folder: logmon
+    folder_name: torus_log
+    package_name: torus_log
+    class_name: TorusLog
+    display_name: Torus Log
+    domain: logs
+  - legacy_folder: vulnemon
+    folder_name: vertex_vuln
+    package_name: vertex_vuln
+    class_name: VertexVuln
+    display_name: Vertex Vuln
+    domain: vulnerabilities
+  - legacy_folder: networkmon
+    folder_name: geodesic_network
+    package_name: geodesic_network
+    class_name: GeodesicNetwork
+    display_name: Geodesic Network
+    domain: network
+  - legacy_folder: forensimon
+    folder_name: helix_trace
+    package_name: helix_trace
+    class_name: HelixTrace
+    display_name: Helix Trace
+    domain: forensics
+  - legacy_folder: ciphermon
+    folder_name: simplex_cipher
+    package_name: simplex_cipher
+    class_name: SimplexCipher
+    display_name: Simplex Cipher
+    domain: cipher
+  - legacy_folder: mnemomon
+    folder_name: lemniscate_mnemo
+    package_name: lemniscate_mnemo
+    class_name: LemniscateMnemo
+    display_name: Lemniscate Mnemo
+    domain: mnemonic

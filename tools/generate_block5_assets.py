@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate tests, docs, examples, and pyproject for Block 5 digimons.
+Generate tests, docs, examples, and pyproject for Block 5 corporate.
 
 Skips files that already exist.
 """
@@ -8,7 +8,7 @@ Skips files that already exist.
 from pathlib import Path
 
 
-DIGIMONS = [
+MODULES = [
     {
         "name": "cloudsecmon",
         "class_name": "CloudSecmon",
@@ -325,12 +325,12 @@ build-backend = "poetry.core.masonry.api"
 [project]
 name = "{name}"
 version = "3.0.0"
-description = "{description} (Mega)"
+description = "{description} (Production)"
 readme = "README.md"
 license = {{text = "MIT"}}
-authors = [{{name = "Kirtan Teg Singh", email = "dev@example.com"}}]
+authors = [{{name = "Kirtan Teg Singh", email = "security@snocomm.dev"}}]
 requires-python = ">=3.10"
-keywords = ["cybersecurity", "digimon", "{name}"]
+keywords = ["cybersecurity", "modulo", "{name}"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
@@ -362,10 +362,10 @@ docs = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/digimon-sec-suite"
-Documentation = "https://digimon-sec-suite.readthedocs.io"
-Repository = "https://github.com/yourusername/digimon-sec-suite/tree/main/digimons/{name}"
-Issues = "https://github.com/yourusername/digimon-sec-suite/issues"
+Homepage = "https://github.com/snocomm-security/modulo-sec-suite"
+Documentation = "https://modulo-sec-suite.readthedocs.io"
+Repository = "https://github.com/snocomm-security/modulo-sec-suite/tree/main/corporate/{name}"
+Issues = "https://github.com/snocomm-security/modulo-sec-suite/issues"
 
 [tool.poetry]
 packages = [{{include = "{name}", from = "src"}}]
@@ -425,7 +425,7 @@ if str(SRC) not in sys.path:
 """
 
 TEST_TEMPLATE = """\"\"\"
-Unit tests for {class_name} (Mega)
+Unit tests for {class_name} (Production)
 \"\"\"
 
 import pytest
@@ -435,7 +435,7 @@ from {name}.models import AnalysisResult, AuditReport
 
 
 @pytest.fixture
-def digimon():
+def modulo():
     \"\"\"Fixture para crear instancia de {class_name}\"\"\"
     return {class_name}()
 
@@ -443,26 +443,26 @@ def digimon():
 class TestInitialization:
     \"\"\"Tests para inicializacion\"\"\"
 
-    def test_init_default(self, digimon):
+    def test_init_default(self, modulo):
         \"\"\"Test inicializacion con valores por defecto\"\"\"
-        assert digimon.name == "{class_name}"
-        assert digimon.mission == "{mission}"
-        assert digimon.role == "{role_code}"
+        assert modulo.name == "{class_name}"
+        assert modulo.mission == "{mission}"
+        assert modulo.role == "{role_code}"
 
     def test_init_with_config(self):
         \"\"\"Test inicializacion con configuracion\"\"\"
         config = {{"severity_threshold": "high"}}
-        digimon = {class_name}(config=config)
-        assert digimon.severity_threshold == "high"
+        modulo = {class_name}(config=config)
+        assert modulo.severity_threshold == "high"
 
 
 class TestAudit:
     \"\"\"Tests para auditoria\"\"\"
 
-    def test_audit(self, digimon):
+    def test_audit(self, modulo):
         \"\"\"Test auditoria basica\"\"\"
         sample = {sample_data}
-        report = digimon.{audit_method}(sample)
+        report = modulo.{audit_method}(sample)
         assert isinstance(report, AuditReport)
         assert report.total_checks > 0
 
@@ -470,10 +470,10 @@ class TestAudit:
 class TestAnalyze:
     \"\"\"Tests para funcionalidad de analisis\"\"\"
 
-    def test_analyze(self, digimon):
+    def test_analyze(self, modulo):
         \"\"\"Test analyze con datos\"\"\"
         sample = {sample_data}
-        result = digimon.analyze({analyze_arg}=sample)
+        result = modulo.analyze({analyze_arg}=sample)
         assert isinstance(result, AnalysisResult)
         assert result.status in ["success", "warning", "error"]
 
@@ -481,24 +481,24 @@ class TestAnalyze:
 class TestValidation:
     \"\"\"Tests para validacion\"\"\"
 
-    def test_validate_none(self, digimon):
+    def test_validate_none(self, modulo):
         \"\"\"Test validacion con None\"\"\"
-        assert digimon.validate(None) is False
+        assert modulo.validate(None) is False
 
-    def test_validate_dict(self, digimon):
+    def test_validate_dict(self, modulo):
         \"\"\"Test validacion con diccionario valido\"\"\"
-        assert digimon.validate({{"key": "value"}}) is True
+        assert modulo.validate({{"key": "value"}}) is True
 
 
 class TestInfo:
-    \"\"\"Tests para informacion del Digimon\"\"\"
+    \"\"\"Tests para informacion del módulo\"\"\"
 
-    def test_get_info_returns_dict(self, digimon):
+    def test_get_info_returns_dict(self, modulo):
         \"\"\"Test que get_info() retorna diccionario\"\"\"
-        info = digimon.get_info()
+        info = modulo.get_info()
         assert isinstance(info, dict)
         assert info["name"] == "{class_name}"
-        assert info["status"] == "Mega"
+        assert info["status"] == "Production"
 
 
 if __name__ == "__main__":
@@ -522,8 +522,8 @@ pip install {name}
 ## Instalacion desde Codigo Fuente
 
 ```bash
-git clone https://github.com/yourusername/digimon-sec-suite.git
-cd digimon-sec-suite/digimons/{name}
+git clone https://github.com/snocomm-security/modulo-sec-suite.git
+cd modulo-sec-suite/corporate/{name}
 python -m venv venv
 source venv/bin/activate  # En Windows: venv\\Scripts\\activate
 pip install -e ".[dev]"
@@ -534,8 +534,8 @@ pip install -e ".[dev]"
 ```python
 from {name}.core import {class_name}
 
-digimon = {class_name}()
-print(digimon.get_info())
+modulo = {class_name}()
+print(modulo.get_info())
 ```
 
 ---
@@ -560,7 +560,7 @@ pip install -e .
 ```python
 from {name}.core import {class_name}
 
-digimon = {class_name}()
+modulo = {class_name}()
 ```
 
 ### 3) Preparar los datos de entrada
@@ -572,14 +572,14 @@ digimon = {class_name}()
 ### 4) Validar los datos (opcional)
 
 ```python
-if not digimon.validate({analyze_arg}):
+if not modulo.validate({analyze_arg}):
     raise ValueError("Datos invalidos")
 ```
 
 ### 5) Ejecutar el analisis
 
 ```python
-result = digimon.analyze({analyze_arg}={analyze_arg})
+result = modulo.analyze({analyze_arg}={analyze_arg})
 print(result.status)
 print(result.message)
 ```
@@ -619,7 +619,7 @@ Valida datos de entrada.
 
 #### `get_info()`
 
-Retorna metadata del Digimon.
+Retorna metadata del módulo.
 
 ---
 
@@ -630,11 +630,11 @@ ARCH_TEMPLATE = """# Arquitectura - {name}
 
 ## Vision General
 
-{name} es un modulo de ciberseguridad implementado como parte del **DIGIMON CYBERSECURITY SUITE**.
+{name} es un modulo de ciberseguridad implementado como parte del **Snocomm Security Suite**.
 
 - **Mision**: {mission}
 - **Rol de Seguridad**: {role_display}
-- **Nivel**: Mega (v3.0.0)
+- **Nivel**: Production (v3.0.0)
 - **Version**: 3.0.0
 
 ## Proposito
@@ -651,7 +651,7 @@ La clase `{class_name}` es el punto de entrada principal.
 - `{audit_method}()`: Ejecuta checks principales
 - `analyze()`: Orquesta la auditoria y retorna `AnalysisResult`
 - `validate()`: Valida inputs
-- `get_info()`: Retorna metadata del Digimon
+- `get_info()`: Retorna metadata del módulo
 
 ### 2. Models (`models.py`)
 
@@ -677,13 +677,13 @@ def main():
     print("-" * 50)
 
     print("\\n[1] Inicializando {class_name}...")
-    digimon = {class_name}()
+    modulo = {class_name}()
 
     print("[2] Preparando datos...")
     {analyze_arg} = {sample_data}
 
     print("[3] Ejecutando analisis de seguridad...")
-    result = digimon.analyze({analyze_arg}={analyze_arg})
+    result = modulo.analyze({analyze_arg}={analyze_arg})
 
     print("\\n[4] Informe de Mision:")
     print("-" * 30)
@@ -743,25 +743,25 @@ def write_if_missing(path: Path, content: str) -> None:
 
 def main() -> None:
     root = Path(__file__).resolve().parent.parent
-    digimons_dir = root / "digimons"
+    corporate_dir = root / "corporate"
 
-    for item in DIGIMONS:
-        digimon_dir = digimons_dir / item["name"]
+    for item in MODULES:
+        modulo_dir = corporate_dir / item["name"]
 
-        write_if_missing(digimon_dir / "pyproject.toml", PYPROJECT_TEMPLATE.format(**item))
-        write_if_missing(digimon_dir / "tests" / "conftest.py", CONFTEST_TEMPLATE.format(**item))
-        write_if_missing(digimon_dir / "tests" / "test_core.py", TEST_TEMPLATE.format(**item))
-        write_if_missing(digimon_dir / "docs" / "INSTALLATION.md", INSTALL_TEMPLATE.format(**item))
-        write_if_missing(digimon_dir / "docs" / "USAGE.md", USAGE_TEMPLATE.format(**item))
+        write_if_missing(modulo_dir / "pyproject.toml", PYPROJECT_TEMPLATE.format(**item))
+        write_if_missing(modulo_dir / "tests" / "conftest.py", CONFTEST_TEMPLATE.format(**item))
+        write_if_missing(modulo_dir / "tests" / "test_core.py", TEST_TEMPLATE.format(**item))
+        write_if_missing(modulo_dir / "docs" / "INSTALLATION.md", INSTALL_TEMPLATE.format(**item))
+        write_if_missing(modulo_dir / "docs" / "USAGE.md", USAGE_TEMPLATE.format(**item))
         api_params = dict(item)
         api_params["config_params"] = "\n".join(item["config_params"])
         write_if_missing(
-            digimon_dir / "docs" / "API.md",
+            modulo_dir / "docs" / "API.md",
             API_TEMPLATE.format(**api_params),
         )
-        write_if_missing(digimon_dir / "docs" / "ARCHITECTURE.md", ARCH_TEMPLATE.format(**item))
-        write_if_missing(digimon_dir / "examples" / "basic_usage.py", EXAMPLE_TEMPLATE.format(**item))
-        write_if_missing(digimon_dir / "examples" / "README.md", EXAMPLE_README.format(**item))
+        write_if_missing(modulo_dir / "docs" / "ARCHITECTURE.md", ARCH_TEMPLATE.format(**item))
+        write_if_missing(modulo_dir / "examples" / "basic_usage.py", EXAMPLE_TEMPLATE.format(**item))
+        write_if_missing(modulo_dir / "examples" / "README.md", EXAMPLE_README.format(**item))
 
 
 if __name__ == "__main__":

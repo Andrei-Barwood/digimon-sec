@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generador de Ejemplos Didácticos para Digimons.
+Generador de Ejemplos Didácticos para módulos.
 Crea directorios 'examples/' con scripts funcionales y documentación amigable.
 """
 
@@ -9,7 +9,7 @@ from pathlib import Path
 import textwrap
 
 # Base de datos de conocimientos (Blocks 1, 2, 3)
-DIGIMON_DATA = {
+MODULE_DATA = {
     # Block 1: Offensive & Defense
     "thirstmon": {"mission": "Good, Honest Snake Oil", "role": "Threat Filter", "desc": "Filtra IoCs maliciosos, distingue amenazas reales"},
     "bandidmon": {"mission": "Outlaws from the West", "role": "Data Protector", "desc": "Protege datos en zonas fronterizas"},
@@ -70,22 +70,22 @@ def main():
     print("-" * 50)
 
     # 1. Inicialización
-    # Aquí es donde 'invocamos' a nuestro Digimon.
+    # Aquí es donde 'invocamos' a nuestro módulo.
     # Puedes pasar configuración personalizada si lo necesitas.
     print(f"\\n[1] Inicializando {name}...")
-    digimon = {class_name}()
+    modulo = {class_name}()
     
     # 2. Validación (Opcional pero recomendada)
     # Antes de lanzarnos a la acción, verificamos que todo esté en orden.
     print("[2] Ejecutando diagnósticos internos...")
     # data_to_validate = {{}} # Descomentar para validar datos específicos
-    # if digimon.validate(data_to_validate):
+    # if modulo.validate(data_to_validate):
     #     print("    ✅ Validación exitosa")
 
     # 3. Ejecución de la Misión Principal
     # Este es el momento de la verdad. Ejecutamos la lógica principal.
     print(f"[3] Ejecutando análisis de seguridad ({desc})...")
-    result = digimon.analyze()
+    result = modulo.analyze()
 
     # 4. Interpretación de Resultados
     print("\\n[4] Informe de Misión:")
@@ -110,7 +110,7 @@ README_EXAMPLE_TEMPLATE = """# 🎓 Ejemplos de Uso: {name}
 
 ¡Hola! Bienvenido al campo de entrenamiento de **{name}**.
 
-Si estás aquí, es porque quieres ver a este Digimon en acción. Su misión, inspirada en *"{mission}"*, es clara: **{desc}**.
+Si estás aquí, es porque quieres ver a este módulo en acción. Su misión, inspirada en *"{mission}"*, es clara: **{desc}**.
 
 Aquí encontrarás ejemplos prácticos para entender cómo integrarlo en tus sistemas sin dolor de cabeza.
 
@@ -128,53 +128,53 @@ python basic_usage.py
 
 ## 🧠 ¿Qué está pasando en el código?
 
-El script `basic_usage.py` sigue un flujo lógico de 4 pasos que verás en casi todos nuestros Digimons:
+El script `basic_usage.py` sigue un flujo lógico de 4 pasos que verás en casi todos nuestros módulos:
 
-1.  **Invocación**: Importamos e instanciamos la clase principal `{class_name}`. Es como sacar al Digimon de su Digivice.
+1.  **Invocación**: Importamos e instanciamos la clase principal `{class_name}`. Es como sacar al módulo de su sistema.
 2.  **Preparación**: (Opcional) Usamos `.validate()` para asegurarnos de que los datos de entrada (si los hay) son seguros y correctos.
 3.  **Acción**: Llamamos a `.analyze()` (o métodos específicos como `.scan()`, `.encrypt()`). Aquí es donde ocurre la magia de seguridad.
-4.  **Reporte**: Recibimos un objeto `AnalysisResult` estructurado. No más adivinar qué pasó; el Digimon te dice exactamente si hubo éxito, advertencia o error.
+4.  **Reporte**: Recibimos un objeto `AnalysisResult` estructurado. No más adivinar qué pasó; el módulo te dice exactamente si hubo éxito, advertencia o error.
 
 ## 💡 Tips Pro
 
-*   **Configuración**: La mayoría de estos Digimons aceptan un diccionario `config` al inicializarse. ¡No tengas miedo de personalizarlo! Revisa el archivo `USAGE.md` en el directorio padre para ver las opciones.
+*   **Configuración**: La mayoría de estos módulos aceptan un diccionario `config` al inicializarse. ¡No tengas miedo de personalizarlo! Revisa el archivo `USAGE.md` en el directorio padre para ver las opciones.
 *   **Integración**: Este código está diseñado para ser copiado y pegado (con ligeros ajustes) en tus pipelines de CI/CD o scripts de automatización.
 
 ---
-*"La seguridad no es un destino, es un viaje constante... y es mejor hacerlo acompañado de un buen Digimon."*
+*"La seguridad no es un destino, es un viaje constante... y es mejor hacerlo acompañado de un buen módulo."*
 """
 
-def get_class_name_and_package(digimon_name, digimon_path):
+def get_class_name_and_package(modulo_name, modulo_path):
     """
     Intenta adivinar el nombre de la clase y el paquete.
     Si falla la detección automática, hace un 'best guess'.
     """
     # Normalizar nombre de paquete (guiones a guiones bajos)
-    package_name = digimon_name.replace("-", "_")
+    package_name = modulo_name.replace("-", "_")
     
     # Intentar encontrar el nombre de la clase en el __init__.py o core.py
     # Por simplicidad y robustez, usaremos una heurística basada en capitalización
     # Ejemplo: pci-dssmon -> PCI_DSSmon, thirstmon -> Thirstmon
     
-    if digimon_name == "pci-dssmon":
+    if modulo_name == "pci-dssmon":
         class_name = "PCI_DSSmon"
-    elif digimon_name == "scastmon": # Caso especial si existe
+    elif modulo_name == "scastmon": # Caso especial si existe
         class_name = "SCASTmon"
     else:
         # Capitalizar primera letra: thirstmon -> Thirstmon
-        class_name = digimon_name.capitalize()
+        class_name = modulo_name.capitalize()
         # Casos especiales de nombres compuestos si los hubiera
     
     # Verificación real leyendo el archivo si es posible
-    src_dir = digimon_path / "src"
+    src_dir = modulo_path / "src"
     real_package_dir = None
     
     # Buscar directorio del paquete
     if (src_dir / package_name).exists():
         real_package_dir = src_dir / package_name
-    elif (src_dir / digimon_name).exists():
-        real_package_dir = src_dir / digimon_name
-        package_name = digimon_name
+    elif (src_dir / modulo_name).exists():
+        real_package_dir = src_dir / modulo_name
+        package_name = modulo_name
     
     if real_package_dir:
         init_file = real_package_dir / "__init__.py"
@@ -190,26 +190,26 @@ def get_class_name_and_package(digimon_name, digimon_path):
 
 def generate_example_docs():
     root_dir = Path(__file__).resolve().parent.parent
-    digimons_dir = root_dir / "digimons"
+    corporate_dir = root_dir / "corporate"
 
-    if not digimons_dir.exists():
-        print("❌ No se encontró el directorio 'digimons'.")
+    if not corporate_dir.exists():
+        print("❌ No se encontró el directorio 'corporate'.")
         return
 
     count = 0
     print("🛠️  Generando ejemplos didácticos...")
 
-    for digimon_dir in sorted(digimons_dir.iterdir()):
-        if not digimon_dir.is_dir():
+    for modulo_dir in sorted(corporate_dir.iterdir()):
+        if not modulo_dir.is_dir():
             continue
             
-        name = digimon_dir.name
+        name = modulo_dir.name
         
-        # Verificar si tenemos datos para este digimon
+        # Verificar si tenemos datos para este modulo
         # Normalizamos a minúsculas para buscar en nuestro diccionario
         key = name.lower()
         
-        if key not in DIGIMON_DATA:
+        if key not in MODULE_DATA:
             # Si no está en la lista explícita, usamos genéricos
             data = {
                 "mission": "Protección del Digimundo", 
@@ -218,13 +218,13 @@ def generate_example_docs():
             }
             # print(f"⚠️  Información genérica usada para {name}")
         else:
-            data = DIGIMON_DATA[key]
+            data = MODULE_DATA[key]
 
         # Obtener nombres técnicos correctos
-        class_name, package_name = get_class_name_and_package(name, digimon_dir)
+        class_name, package_name = get_class_name_and_package(name, modulo_dir)
 
         # Crear directorio examples
-        examples_dir = digimon_dir / "examples"
+        examples_dir = modulo_dir / "examples"
         examples_dir.mkdir(exist_ok=True)
 
         # Generar basic_usage.py
@@ -252,7 +252,7 @@ def generate_example_docs():
         print(f"✅ Ejemplos generados para {name} ({class_name})")
         count += 1
 
-    print(f"\n✨ ¡Proceso completado! Se generó documentación didáctica para {count} digimons.")
+    print(f"\n✨ ¡Proceso completado! Se generó documentación didáctica para {count} corporate.")
 
 if __name__ == "__main__":
     generate_example_docs()

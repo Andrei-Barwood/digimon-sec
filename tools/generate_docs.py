@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Script para generar documentación automáticamente para todos los Digimons (Versión Mejorada)
+Script para generar documentación automáticamente para todos los módulos Snocomm (Versión Mejorada)
 
 Uso:
     python tools/generate_docs.py
-    python tools/generate_docs.py --digimon <nombre>
+    python tools/generate_docs.py --modulo <nombre>
     python tools/generate_docs.py --overwrite
 """
 
@@ -34,8 +34,8 @@ pip install {name}
 ## Instalación desde Código Fuente
 
 ```bash
-git clone https://github.com/yourusername/digimon-sec-suite.git
-cd digimon-sec-suite/digimons/{name}
+git clone https://github.com/snocomm-security/snocomm-security-suite.git
+cd snocomm-security-suite/corporate/{name}
 python -m venv venv
 source venv/bin/activate  # En Windows: venv\\Scripts\\activate
 pip install -e ".[dev]"
@@ -46,8 +46,8 @@ pip install -e ".[dev]"
 ```python
 from {import_name}.core import {class_name}
 
-digimon = {class_name}()
-print(digimon.get_info())
+mod = {class_name}()
+print(mod.get_info())
 ```
 
 ---
@@ -71,11 +71,11 @@ pip install -e .
 from {import_name}.core import {class_name}
 
 # Crear instancia
-digimon = {class_name}()
+mod = {class_name}()
 
 # Ejecutar análisis principal
 # Nota: Revise API.md para ver los argumentos específicos de analyze()
-result = digimon.analyze()
+result = mod.analyze()
 print(result)
 ```
 
@@ -84,7 +84,7 @@ print(result)
 Puede configurar {name} pasando un diccionario al constructor:
 
 ```python
-digimon = {class_name}(config={{
+mod = {class_name}(config={{
 {config_example}
 }})
 ```
@@ -96,10 +96,10 @@ digimon = {class_name}(config={{
 ```python
 from {import_name}.core import {class_name}
 
-digimon = {class_name}()
+mod = {class_name}()
 
 # Ejecutar análisis (ajuste los parámetros según sus necesidades)
-result = digimon.analyze()
+result = mod.analyze()
 
 if result.status == "success":
     print(f"Operación exitosa: {{result.message}}")
@@ -115,7 +115,7 @@ else:
 
 ```python
 data = "..." # Datos a validar
-if digimon.validate(data):
+if mod.validate(data):
     print("Datos válidos para procesamiento")
 else:
     print("Datos inválidos")
@@ -164,11 +164,11 @@ ARCHITECTURE_TEMPLATE = """# Arquitectura - {name}
 
 ## Visión General
 
-{name} es un módulo de ciberseguridad implementado como parte del **DIGIMON CYBERSECURITY SUITE**.
+{name} es un módulo de ciberseguridad implementado como parte del **Snocomm Security Suite**.
 
 - **Misión**: {mission}
 - **Rol de Seguridad**: {role}
-- **Nivel**: Mega (v3.0.0)
+- **Nivel**: Production (v3.0.0)
 - **Versión**: 3.0.0
 
 ## Propósito
@@ -197,7 +197,7 @@ Proporciona utilidades auxiliares como configuración de logging y helpers comun
 
 ## Configuración y Personalización
 
-El digimon se configura mediante un diccionario inmutable (`frozen=True` en Pydantic) pasado al inicializador.
+El módulo se configura mediante un diccionario inmutable (`frozen=True` en Pydantic) pasado al inicializador.
 
 ```python
 config = {{
@@ -250,10 +250,10 @@ def extract_config_from_init(content: str) -> List[Dict[str, str]]:
         
     return config_params
 
-def extract_digimon_info(digimon_path: Path) -> Dict[str, Any]:
-    """Extrae información detallada del digimon mediante análisis AST y Regex."""
+def extract_modulo_info(modulo_path: Path) -> Dict[str, Any]:
+    """Extrae información detallada del modulo mediante análisis AST y Regex."""
     info = {
-        "name": digimon_path.name,
+        "name": modulo_path.name,
         "class_name": "",
         "mission": "No especificada",
         "role": "No especificado",
@@ -261,22 +261,22 @@ def extract_digimon_info(digimon_path: Path) -> Dict[str, Any]:
         "methods": [],
         "config_params": [],
         "models": [],
-        "import_name": digimon_path.name
+        "import_name": modulo_path.name
     }
 
     # 1. Analizar __init__.py
     # Buscar el directorio del paquete real dentro de src
-    src_dir = digimon_path / "src"
+    src_dir = modulo_path / "src"
     package_dir = None
     
     if src_dir.exists():
-        # Intentar con el nombre del digimon
-        potential_package = src_dir / digimon_path.name
+        # Intentar con el nombre del modulo
+        potential_package = src_dir / modulo_path.name
         if potential_package.exists():
             package_dir = potential_package
         else:
             # Intentar normalizando nombre (guiones a guiones bajos)
-            normalized_name = digimon_path.name.replace("-", "_")
+            normalized_name = modulo_path.name.replace("-", "_")
             potential_package = src_dir / normalized_name
             if potential_package.exists():
                 package_dir = potential_package
@@ -392,15 +392,15 @@ def extract_digimon_info(digimon_path: Path) -> Dict[str, Any]:
 
     return info
 
-def generate_docs(digimon_path: Path, overwrite: bool = False) -> bool:
-    """Genera los documentos para un digimon."""
-    docs_dir = digimon_path / "docs"
+def generate_docs(modulo_path: Path, overwrite: bool = False) -> bool:
+    """Genera los documentos para un modulo."""
+    docs_dir = modulo_path / "docs"
     docs_dir.mkdir(exist_ok=True)
 
-    info = extract_digimon_info(digimon_path)
+    info = extract_modulo_info(modulo_path)
     
     if not info["class_name"]:
-        print(f"⚠️  No se pudo determinar la clase principal para {digimon_path.name}. Saltando.")
+        print(f"⚠️  No se pudo determinar la clase principal para {modulo_path.name}. Saltando.")
         return False
 
     name = info["name"]
@@ -434,7 +434,7 @@ def generate_docs(digimon_path: Path, overwrite: bool = False) -> bool:
         methods_doc += f"{method['docstring']}\n\n"
         
         # Resumen para arquitectura
-        summary = method['docstring'].split('.')[0] if method['docstring'] else "Operación del digimon"
+        summary = method['docstring'].split('.')[0] if method['docstring'] else "Operación del módulo"
         methods_list_arch += f"- `{method['name']}()`: {summary}\n"
 
     # Modelos
@@ -490,28 +490,28 @@ def generate_docs(digimon_path: Path, overwrite: bool = False) -> bool:
     return True
 
 def main():
-    parser = argparse.ArgumentParser(description="Generador de Documentación Digimon")
-    parser.add_argument("--digimon", "-d", type=str, help="Nombre del digimon")
+    parser = argparse.ArgumentParser(description="Generador de Documentación Snocomm")
+    parser.add_argument("--modulo", "-d", type=str, help="Nombre del módulo (carpeta en corporate/)")
     parser.add_argument("--overwrite", "-o", action="store_true", help="Sobrescribir archivos existentes")
     args = parser.parse_args()
 
     project_root = Path(__file__).resolve().parent.parent
-    digimons_dir = project_root / "digimons"
+    corporate_dir = project_root / "corporate"
 
-    if args.digimon:
-        target_dir = digimons_dir / args.digimon
+    if args.modulo:
+        target_dir = corporate_dir / args.modulo
         if not target_dir.exists():
-            print(f"❌ Digimon no encontrado: {args.digimon}")
+            print(f"❌ Módulo no encontrado: {args.modulo}")
             return
         generate_docs(target_dir, overwrite=args.overwrite)
     else:
         count = 0
-        for d in sorted(digimons_dir.iterdir()):
+        for d in sorted(corporate_dir.iterdir()):
             if d.is_dir() and (d / "src").exists():
                 print(f"📦 Procesando {d.name}...")
                 if generate_docs(d, overwrite=args.overwrite):
                     count += 1
-        print(f"\n✨ Completado. Documentación generada para {count} digimons.")
+        print(f"\n✨ Completado. Documentación generada para {count} módulos.")
 
 if __name__ == "__main__":
     main()
