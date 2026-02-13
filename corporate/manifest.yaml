@@ -386,3 +386,81 @@ modules:
     class_name: HausdorffMatch
     display_name: Hausdorff Match
     domain: signature-matching
+  - legacy_folder: tiomon
+    folder_name: tesseract_beacon
+    package_name: tesseract_beacon
+    class_name: TesseractBeacon
+    display_name: Tesseract Beacon
+    domain: threat-intel-aggregation
+  - legacy_folder: cti-mon
+    folder_name: lattice_tactic
+    package_name: lattice_tactic
+    class_name: LatticeTactic
+    display_name: Lattice Tactic
+    domain: cti-analysis
+  - legacy_folder: strategymon
+    folder_name: geodesic_strategy
+    package_name: geodesic_strategy
+    class_name: GeodesicStrategy
+    display_name: Geodesic Strategy
+    domain: security-strategy
+  - legacy_folder: orchestratormon
+    folder_name: manifold_conductor
+    package_name: manifold_conductor
+    class_name: ManifoldConductor
+    display_name: Manifold Conductor
+    domain: security-orchestration
+  - legacy_folder: integrationmon
+    folder_name: hyperplane_bridge
+    package_name: hyperplane_bridge
+    class_name: HyperplaneBridge
+    display_name: Hyperplane Bridge
+    domain: api-integration
+  - legacy_folder: webhookmon
+    folder_name: vertex_hook
+    package_name: vertex_hook
+    class_name: VertexHook
+    display_name: Vertex Hook
+    domain: webhook-management
+  - legacy_folder: reportingmon
+    folder_name: fractal_report
+    package_name: fractal_report
+    class_name: FractalReport
+    display_name: Fractal Report
+    domain: security-reporting
+  - legacy_folder: auditmon
+    folder_name: torus_audit
+    package_name: torus_audit
+    class_name: TorusAudit
+    display_name: Torus Audit
+    domain: audit-logging
+  - legacy_folder: compliancemonitor
+    folder_name: lemniscate_compliance
+    package_name: lemniscate_compliance
+    class_name: LemniscateCompliance
+    display_name: Lemniscate Compliance
+    domain: continuous-compliance-monitoring
+  - legacy_folder: metricsmon
+    folder_name: polytope_metrics
+    package_name: polytope_metrics
+    class_name: PolytopeMetrics
+    display_name: Polytope Metrics
+    domain: security-metrics-kpi
+  - legacy_folder: notificationmon
+    folder_name: helix_notify
+    package_name: helix_notify
+    class_name: HelixNotify
+    display_name: Helix Notify
+    domain: security-notifications
+  - legacy_folder: ticketingmon
+    folder_name: simplex_ticket
+    package_name: simplex_ticket
+    class_name: SimplexTicket
+    display_name: Simplex Ticket
+    domain: security-ticketing
+  - legacy_folder: universecodeemon
+    folder_name: polyhedron_core
+    package_name: polyhedron_core
+    class_name: PolyhedronCore
+    display_name: Polyhedron Core
+    domain: framework-core

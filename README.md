@@ -52,6 +52,7 @@ El nombre de cada empresa Snocomm sigue una convención que combina:
 | Affine | Replica | Affine Replica |
 | Persistent | Nerve | Persistent Nerve |
 | Helly | Rules | Helly Rules |
+| Polyhedron | Core | Polyhedron Core |
 
 ---
 
@@ -125,6 +126,19 @@ Cada fila es una empresa filial de Snocomm. El **dominio** indica el ámbito té
 | Persistent Nerve | behavior-analysis | `persistent_nerve` |
 | Helly Rules | yara-engine | `helly_rules` |
 | Hausdorff Match | signature-matching | `hausdorff_match` |
+| Tesseract Beacon | threat-intel-aggregation | `tesseract_beacon` |
+| Lattice Tactic | cti-analysis | `lattice_tactic` |
+| Geodesic Strategy | security-strategy | `geodesic_strategy` |
+| Manifold Conductor | security-orchestration | `manifold_conductor` |
+| Hyperplane Bridge | api-integration | `hyperplane_bridge` |
+| Vertex Hook | webhook-management | `vertex_hook` |
+| Fractal Report | security-reporting | `fractal_report` |
+| Torus Audit | audit-logging | `torus_audit` |
+| Lemniscate Compliance | continuous-compliance-monitoring | `lemniscate_compliance` |
+| Polytope Metrics | security-metrics-kpi | `polytope_metrics` |
+| Helix Notify | security-notifications | `helix_notify` |
+| Simplex Ticket | security-ticketing | `simplex_ticket` |
+| Polyhedron Core | framework-core | `polyhedron_core` |
 
 ---
 

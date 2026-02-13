@@ -1,0 +1,26 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[project]
+name = "lemniscate_compliance"
+version = "3.0.0"
+description = "Monitorea cumplimiento continuo frente a marcos regulatorios y controles internos. (Production)"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Kirtan Teg Singh", email = "security@snocomm.dev"}]
+requires-python = ">=3.10"
+keywords = ["cybersecurity", "snocomm", "compliance-monitor", "lemniscate_compliance"]
+dependencies = [
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4.0", "pytest-cov>=4.1.0", "black>=23.0.0", "flake8>=6.0.0", "mypy>=1.4.0", "isort>=5.12.0"]
+
+[project.urls]
+Homepage = "https://github.com/snocomm-security/snocomm-security-suite"
+Repository = "https://github.com/snocomm-security/snocomm-security-suite/tree/main/corporate/lemniscate_compliance"
+
+[tool.poetry]
+packages = [{include = "lemniscate_compliance", from = "src"}]

@@ -832,3 +832,172 @@ signature-matching:
   ganancia_invertir: "Optimiza operación diaria del SOC y libera tiempo para casos complejos en vez de repetir triage básico."
   perdida_no_invertir: "Investigaciones duplicadas, tiempos de respuesta más largos y mayor coste operativo por incidente."
   diferenciador: "Matching robusto de variantes, enfoque práctico para operaciones y salida lista para decisión de contención."
+
+threat-intel-aggregation:
+  titulo_rubro: "Agregación de inteligencia de amenazas"
+  descripcion: "Unificar feeds de inteligencia en una sola vista permite detectar campañas activas con más rapidez y menos ruido operativo."
+  con_vs_sin_rows:
+    - ["Fuentes de inteligencia unificadas", "✅ Correlacionadas", "❌ Dispersas"]
+    - ["Priorización de IOCs", "✅ Contextual y automática", "❌ Manual"]
+    - ["Tiempo para pasar de dato a acción", "✅ Minutos", "❌ Horas o días"]
+  beneficios: "Menor fatiga de alertas; detección más temprana; mejor coordinación entre SOC y respuesta a incidentes."
+  ejemplo_vida: "Una pyme de servicios detecta una campaña sectorial porque cruza IOCs de tres feeds y bloquea dominios antes del impacto."
+  ganancia_invertir: "Un analista con agregación centralizada incrementa cobertura sin aumentar proporcionalmente el equipo."
+  perdida_no_invertir: "Señales críticas perdidas entre fuentes, detección tardía y decisiones basadas en información incompleta."
+  diferenciador: "Normalización multi-fuente, scoring de confianza y salidas listas para SIEM/SOAR."
+
+cti-analysis:
+  titulo_rubro: "Análisis CTI táctico"
+  descripcion: "Transformar inteligencia táctica en hipótesis de defensa acelera la detección de técnicas realmente relevantes para el negocio."
+  con_vs_sin_rows:
+    - ["Correlación de TTPs y campañas", "✅ Accionable", "❌ Teórica o inconexa"]
+    - ["Alineación al sector de la empresa", "✅ Priorizada", "❌ Genérica"]
+    - ["Utilidad para SOC", "✅ Inmediata", "❌ Baja"]
+  beneficios: "Mejor foco del equipo; detecciones más precisas; decisiones de defensa orientadas al riesgo real."
+  ejemplo_vida: "El SOC ajusta reglas tras identificar TTPs activos de un actor que ya atacaba empresas del mismo rubro."
+  ganancia_invertir: "Convierte inteligencia externa en acciones internas medibles, elevando madurez sin sobredimensionar costos."
+  perdida_no_invertir: "Reacción tardía a campañas en curso y exceso de controles sin prioridad real."
+  diferenciador: "Puente entre CTI y operación diaria, con recomendaciones tácticas listas para ejecutar."
+
+security-strategy:
+  titulo_rubro: "Planificación estratégica de seguridad"
+  descripcion: "Definir una estrategia clara alinea inversión, riesgo y objetivos de negocio. Sin hoja de ruta, la seguridad se vuelve reactiva."
+  con_vs_sin_rows:
+    - ["Roadmap de capacidades", "✅ Priorizado", "❌ Ad hoc"]
+    - ["Alineación con dirección", "✅ Clara", "❌ Fragmentada"]
+    - ["Seguimiento de avance", "✅ Medible", "❌ Difuso"]
+  beneficios: "Mejor uso del presupuesto; decisiones sostenibles; reducción de brechas de control críticas."
+  ejemplo_vida: "La empresa define un plan de 12 meses con hitos trimestrales y reduce riesgos críticos antes de una auditoría clave."
+  ganancia_invertir: "Un líder de seguridad con marco estratégico logra más impacto con el mismo presupuesto."
+  perdida_no_invertir: "Inversión dispersa, iniciativas inconexas y menor capacidad para justificar decisiones ante dirección."
+  diferenciador: "Estrategia orientada a ejecución, priorizada por riesgo y traducida a métricas de negocio."
+
+security-orchestration:
+  titulo_rubro: "Orquestación de seguridad"
+  descripcion: "Automatizar flujos entre herramientas reduce tiempos de respuesta y errores humanos en operaciones críticas."
+  con_vs_sin_rows:
+    - ["Integración de playbooks", "✅ Automatizada", "❌ Manual"]
+    - ["Tiempo de contención", "✅ Reducido", "❌ Elevado"]
+    - ["Consistencia operativa", "✅ Alta", "❌ Variable"]
+  beneficios: "MTTR menor; operación SOC más escalable; menos tareas repetitivas para analistas."
+  ejemplo_vida: "Ante una alerta crítica, se ejecuta bloqueo, aislamiento y creación de ticket en cadena sin intervención manual completa."
+  ganancia_invertir: "Permite a equipos pequeños responder como una operación más madura y estructurada."
+  perdida_no_invertir: "Retrasos en contención, errores en handoff y alta dependencia de conocimiento individual."
+  diferenciador: "Orquestación pragmática, integración multi-herramienta y gobernanza de playbooks."
+
+api-integration:
+  titulo_rubro: "Integración de APIs de terceros"
+  descripcion: "Conectar APIs de seguridad y negocio con controles adecuados evita brechas por acoplamientos inseguros."
+  con_vs_sin_rows:
+    - ["Gestión de autenticación API", "✅ Controlada", "❌ Dispersa"]
+    - ["Monitoreo de fallos y drift", "✅ Continuo", "❌ Reactivo"]
+    - ["Trazabilidad de integraciones", "✅ Completa", "❌ Parcial"]
+  beneficios: "Integraciones más robustas; menos interrupciones operativas; menor riesgo por errores de conexión."
+  ejemplo_vida: "Una integración SIEM-ticketing detecta drift de esquema y evita pérdida silenciosa de alertas."
+  ganancia_invertir: "Reduce incidentes por integración y acelera despliegue de nuevos servicios conectados."
+  perdida_no_invertir: "Fallos de sincronización, datos incompletos y respuestas de seguridad basadas en información corrupta."
+  diferenciador: "Controles de autenticación, validación de contrato y observabilidad de extremo a extremo."
+
+webhook-management:
+  titulo_rubro: "Gestión de webhooks"
+  descripcion: "Los webhooks son críticos para automatización en tiempo real. Gestionarlos con seguridad evita spoofing, pérdidas y retrasos."
+  con_vs_sin_rows:
+    - ["Validación de firma", "✅ Enforzada", "❌ Opcional"]
+    - ["Reintentos y cola", "✅ Gestionados", "❌ Manuales"]
+    - ["Visibilidad de entrega", "✅ Completa", "❌ Limitada"]
+  beneficios: "Automatizaciones confiables; menor riesgo de eventos falsos; continuidad operativa en integraciones."
+  ejemplo_vida: "Un webhook no firmado es bloqueado y auditado antes de disparar acciones automáticas en producción."
+  ganancia_invertir: "Mejora calidad de flujo entre plataformas sin depender de supervisión constante."
+  perdida_no_invertir: "Eventos perdidos o falsificados, incidentes por automatizaciones mal disparadas y retrabajo operativo."
+  diferenciador: "Seguridad de webhook por diseño, trazabilidad y resiliencia de entrega."
+
+security-reporting:
+  titulo_rubro: "Generación de reportes de seguridad"
+  descripcion: "Reportes claros para perfiles técnicos y ejecutivos mejoran decisión, auditoría y seguimiento de riesgos."
+  con_vs_sin_rows:
+    - ["Reportes por audiencia", "✅ Técnicos y ejecutivos", "❌ Únicos y poco útiles"]
+    - ["Tiempo de preparación", "✅ Rápido", "❌ Lento"]
+    - ["Trazabilidad de evidencia", "✅ Incluida", "❌ Incompleta"]
+  beneficios: "Mejor comunicación con dirección; auditorías más fluidas; foco en decisiones accionables."
+  ejemplo_vida: "El CISO presenta evolución trimestral con datos consistentes y obtiene aprobación de presupuesto basada en evidencias."
+  ganancia_invertir: "Reduce horas de consolidación manual y mejora calidad de reporting en comités."
+  perdida_no_invertir: "Decisiones con datos ambiguos, auditorías complejas y menor credibilidad del área de seguridad."
+  diferenciador: "Plantillas orientadas a resultados, métricas comparables y evidencia trazable."
+
+audit-logging:
+  titulo_rubro: "Registro y auditoría de eventos"
+  descripcion: "Tener trazabilidad íntegra de eventos es clave para forense, cumplimiento y accountability."
+  con_vs_sin_rows:
+    - ["Integridad del log", "✅ Verificable", "❌ Dudosa"]
+    - ["Cobertura de eventos críticos", "✅ Alta", "❌ Parcial"]
+    - ["Búsqueda para investigación", "✅ Rápida", "❌ Lenta"]
+  beneficios: "Investigaciones más sólidas; cumplimiento normativo; reducción de riesgo legal y operativo."
+  ejemplo_vida: "Durante un incidente interno, la trazabilidad de eventos permite demostrar acciones, tiempos y responsables con precisión."
+  ganancia_invertir: "Acelera análisis post-incidente y mejora posición ante auditorías y aseguradoras."
+  perdida_no_invertir: "Evidencias incompletas, investigaciones inconclusas y hallazgos críticos en auditoría."
+  diferenciador: "Enfoque en integridad, continuidad temporal y operatividad de consulta."
+
+continuous-compliance-monitoring:
+  titulo_rubro: "Monitoreo continuo de cumplimiento"
+  descripcion: "Pasar de cumplimiento puntual a monitoreo continuo reduce sorpresas en auditorías y fortalece la postura regulatoria."
+  con_vs_sin_rows:
+    - ["Visibilidad del estado de controles", "✅ Continua", "❌ Esporádica"]
+    - ["Detección de desvíos", "✅ Temprana", "❌ Tardía"]
+    - ["Preparación para auditoría", "✅ Permanente", "❌ De último minuto"]
+  beneficios: "Menos no conformidades; mejor gobierno; reducción de riesgo regulatorio."
+  ejemplo_vida: "Una organización corrige desviaciones de control semanas antes de auditoría externa gracias a monitoreo continuo."
+  ganancia_invertir: "Un equipo pequeño puede sostener múltiples marcos de cumplimiento con menos esfuerzo manual."
+  perdida_no_invertir: "Hallazgos recurrentes, sobrecarga de última hora y costos elevados de remediación urgente."
+  diferenciador: "Controles vivos, alertas por drift y reporting listo para auditor y dirección."
+
+security-metrics-kpi:
+  titulo_rubro: "Seguimiento de KPIs de seguridad"
+  descripcion: "Medir KPIs de seguridad permite demostrar avance real, identificar cuellos de botella y alinear operaciones con objetivos."
+  con_vs_sin_rows:
+    - ["Métricas clave (MTTR, MTTD, backlog)", "✅ Centralizadas", "❌ Dispersas"]
+    - ["Seguimiento de tendencias", "✅ Histórico y comparable", "❌ Puntual"]
+    - ["Decisión basada en datos", "✅ Consistente", "❌ Intuitiva"]
+  beneficios: "Mayor control de rendimiento SOC; mejor priorización; transparencia ante dirección."
+  ejemplo_vida: "La organización identifica aumento de backlog crítico y ajusta recursos antes de degradar SLAs."
+  ganancia_invertir: "Métricas confiables convierten operación de seguridad en gestión de mejora continua."
+  perdida_no_invertir: "Falta de visibilidad de desempeño, decisiones reactivas y dificultad para justificar inversión."
+  diferenciador: "KPIs orientados a operación y negocio, con enfoque en acción y mejora medible."
+
+security-notifications:
+  titulo_rubro: "Notificaciones de eventos de seguridad"
+  descripcion: "Notificar correctamente en tiempo y canal adecuados es vital para que una alerta se convierta en respuesta efectiva."
+  con_vs_sin_rows:
+    - ["Escalamiento por criticidad", "✅ Automatizado", "❌ Manual"]
+    - ["Entrega multicanal", "✅ Confiable", "❌ Inconsistente"]
+    - ["Tiempo de acuse", "✅ Medido", "❌ No controlado"]
+  beneficios: "Menor tiempo de reacción; coordinación operativa más clara; reducción de incidentes sin dueño."
+  ejemplo_vida: "Una alerta crítica escala automáticamente a guardia on-call y liderazgo cuando no hay acuse en el tiempo definido."
+  ganancia_invertir: "Reduce pérdidas por demoras de comunicación y mejora disciplina operativa en incidentes."
+  perdida_no_invertir: "Alertas ignoradas, escalamiento tardío y mayor impacto de incidentes por falta de coordinación."
+  diferenciador: "Notificación contextual con escalamiento inteligente y trazabilidad de entrega y acuse."
+
+security-ticketing:
+  titulo_rubro: "Motor de ticketing de seguridad"
+  descripcion: "Convertir alertas en tickets accionables con prioridad y SLA evita que riesgos reales queden sin seguimiento."
+  con_vs_sin_rows:
+    - ["Creación automática de tickets", "✅ Inmediata", "❌ Manual"]
+    - ["Asignación por prioridad/SLA", "✅ Inteligente", "❌ Genérica"]
+    - ["Seguimiento de cierre", "✅ Trazable", "❌ Inconstante"]
+  beneficios: "Mayor disciplina operativa; menor fuga de alertas; respuesta alineada a impacto."
+  ejemplo_vida: "Una alerta de credenciales expuestas genera ticket crítico con dueño y SLA en segundos."
+  ganancia_invertir: "Reduce backlog desordenado y mejora calidad del ciclo detección-respuesta-remediación."
+  perdida_no_invertir: "Alertas sin tratamiento, incumplimiento de SLA y mayor probabilidad de incidentes repetidos."
+  diferenciador: "Ticketing orientado a seguridad, priorización por riesgo y visibilidad de extremo a extremo."
+
+framework-core:
+  titulo_rubro: "Framework central de ciberseguridad"
+  descripcion: "Un núcleo común de integración reduce fricción entre módulos, estandariza contratos y acelera evolución del ecosistema."
+  con_vs_sin_rows:
+    - ["Interoperabilidad entre módulos", "✅ Estandarizada", "❌ Frágil"]
+    - ["Gestión de contratos y dependencias", "✅ Gobernada", "❌ Reactiva"]
+    - ["Escalabilidad del ecosistema", "✅ Sostenible", "❌ Costosa"]
+  beneficios: "Mayor consistencia arquitectónica; despliegues más confiables; menor deuda técnica de integración."
+  ejemplo_vida: "Una actualización de módulos se despliega sin romper flujos críticos gracias a contratos versionados y validaciones centralizadas."
+  ganancia_invertir: "Permite crecer capacidades sin multiplicar complejidad operativa y técnica."
+  perdida_no_invertir: "Integraciones frágiles, regresiones frecuentes y aumento continuo de costos de mantenimiento."
+  diferenciador: "Core de integración con foco en contratos, salud de pipelines y operación empresarial."
